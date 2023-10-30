@@ -5,6 +5,7 @@ import { AjoutProprietaireComponent } from './ajout-proprietaire/ajout-proprieta
 import { ProfilEleveurComponent } from './profil-eleveur/profil-eleveur.component';
 import { DefauldCategorieComponent } from './defauld-categorie/defauld-categorie.component';
 import { AjoutCategorieComponent } from './ajout-categorie/ajout-categorie.component';
+import { ModifierEmployerComponent } from './modifier-employer/modifier-employer.component';
 const routes: Routes = [
 
 
@@ -32,7 +33,11 @@ const routes: Routes = [
   {
     path: 'newcategorie', // URL pour la page 'accueil-awa'
     component: AjoutCategorieComponent // Charge le composant AccueilAwaComponent
-  }
+  },
+  {
+    path: 'modifier', // URL pour la page 'accueil-awa'
+    component: ModifierEmployerComponent // Charge le composant AccueilAwaComponent
+  },
 ];
 
 @NgModule({

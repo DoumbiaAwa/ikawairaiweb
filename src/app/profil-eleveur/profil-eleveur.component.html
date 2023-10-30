@@ -3,7 +3,7 @@
       <img  class="logo" src="../assets/logo.png">
       <ul class="custom-list">
           <div class="bar"    (click)="handleClick()" [ngClass]="{'active': isActive}">
-        <li class="custom-item">
+        <li class="custom-item" routerLink="../accueil-awa">
           <i class="icon-person-outline"> 
               <mat-icon>person</mat-icon>
           </i>
@@ -37,7 +37,7 @@
       <div class="action">
   
         <div >
-        <Button class="modifier">Modifier</Button>
+        <Button class="modifier" (click)="openDialog()">Modifier</Button>
       </div>
   
       <div>
