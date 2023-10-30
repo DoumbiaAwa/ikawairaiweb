@@ -1,0 +1,129 @@
+<div class="container">
+    <div class="left">
+      <img  class="logo" src="../assets/logo.png">
+      <ul class="custom-list">
+          <div class="bar"    (click)="handleClick()" [ngClass]="{'active': isActive}">
+        <li class="custom-item">
+          <i class="icon-person-outline"> 
+              <mat-icon>person</mat-icon>
+          </i>
+          <span>Liste des éleveurs</span>
+
+        </li>
+      </div>
+      <div class="bar">
+        <li class="custom-item" routerLink="../defauld">
+          <i class="icon-grid-outline">
+              <mat-icon>apps</mat-icon>
+
+
+          </i>
+          Catégories
+        </li>
+        </div>
+      </ul>
+    </div>
+  
+    
+  <div class="droite">
+    <!-- bord -->
+    <div class="bord">
+      <p class="text">Tableau de bord</p>
+    </div>
+     <!-- parti info -->
+    <div class="ti">
+      <h1>Youssouf Berté</h1>
+      <!-- les boutons -->
+      <div class="action">
+  
+        <div >
+        <Button class="modifier">Modifier</Button>
+      </div>
+  
+      <div>
+        <Button  class="supprimer">Supprimer</Button>
+      </div>
+      </div>
+    </div>
+  <!-- card info -->
+  <div class="information">
+  
+    <div class="info-card"> 
+      <div class="contenu">
+      <div class="text"> 
+        <div>
+        <h3 class="coo">Code: </h3>
+      </div>
+      <div>
+        <h3 class="info">AZER% </h3>
+      </div>
+      </div>
+  
+      <div class="text"> 
+        <div> 
+        <h3 class="coo">Nomferme: </h3>
+      </div>
+      <div>
+        <h3 class="info">Grabali</h3>
+      </div>
+      </div>
+  
+      <div class="text"> 
+        <div>
+        <h3 class="coo">Email: </h3>
+      </div>
+      <div>
+        <h3 class="info">Youssouf@gmail.com</h3>
+      </div>
+      </div>
+      
+      <div class="text"> 
+        <div>
+        <h3 class="coo">Adresse: </h3>
+      </div>
+      <div>
+        <h3 class="info">Bamako</h3>
+      </div>
+      </div>
+  
+      <div class="text"> 
+        <div>
+        <h3 class="coo">Tel: </h3>
+      </div>
+      <div>
+        <h3 class="info">+2230000</h3>
+      </div>
+      </div>
+    </div>
+    </div>
+  
+    <div class="statut-card">
+  
+      
+        <h3>Statut de l'éléveurs</h3>
+        <div class="texte">
+       
+          <div class="local"><img src="./assets/local.png"></div>
+          <div class="statut">
+          <div class="categorie">
+            <h1>32</h1>
+            <h3>Catégories</h3>
+            
+          </div>
+  
+          <div class="categorie">
+            <h1>66</h1>
+            <h3>Nombres d'animaux</h3>
+            
+          </div>
+  
+          
+        </div>
+  
+      </div>
+  
+    </div>
+    
+  </div>
+    </div>
+    </div>

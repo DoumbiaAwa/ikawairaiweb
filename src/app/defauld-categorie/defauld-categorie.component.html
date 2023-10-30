@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="left">
+      <img  class="logo" src="../assets/logo.png">
+      <ul class="custom-list">
+        <div class="bar" routerLink="../accueil-awa">
+      <li class="custom-item">
+        <i class="icon-person-outline"> 
+            <mat-icon>person</mat-icon>
+        </i>
+        <span>Liste des éleveurs</span>
+
+      </li>
+    </div>
+    <div class="bar" (click)="handleClick()" [ngClass]="{'active': isActive}">
+      <li class="custom-item" routerLink="../defauld">
+        <i class="icon-grid-outline">
+            <mat-icon>apps</mat-icon>
+
+
+        </i>
+        Catégories
+      </li>
+      </div>
+    </ul>
+    </div>
+    
+  <!-- les card Catégorie -->
+  <div class="droite">
+    <div class="bord">
+      <p class="text">Tableau de bord</p>
+    </div>
+    <div class="ti">
+      <h1>Catégories pas défaut</h1>
+    </div>
+      <!-- le bouton ajout -->
+      <div class="ajout">
+        <button class="btn" (click)="openDialog()">
+          Ajouter une catégorie
+          <img class="ico" src="./assets/ajout.png"  style="float: right;">
+        </button>
+      </div>
+
+  <!-- card catégorie -->
+  <div class="card">
+    <img src="../assets/modifier.png" class="md">
+    <div class="title">
+      <p>Poulet</p>
+    </div>
+    <div class="icon">
+    <img src="./assets/poulet.png">
+    </div>
+    <div class="nbre">
+     <p>Nombres de race : 5</p>
+     <button class="butn">Supprimer</button>
+    </div>
+  </div>
+  
+  
+  
+  </div>
+  </div>
