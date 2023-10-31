@@ -4,8 +4,7 @@
       <ul class="custom-list">
         <div class="bar" routerLink="../accueil-awa">
       <li class="custom-item">
-        <i class="icon-person-outline"> 
-            <mat-icon>person</mat-icon>
+        <i class='bx bx-user'> 
         </i>
         <span>Liste des éleveurs</span>
 
@@ -13,10 +12,7 @@
     </div>
     <div class="bar" (click)="handleClick()" [ngClass]="{'active': isActive}">
       <li class="custom-item" routerLink="../defauld">
-        <i class="icon-grid-outline">
-            <mat-icon>apps</mat-icon>
-
-
+        <i class='bx bxs-grid-alt'>
         </i>
         Catégories
       </li>
@@ -42,7 +38,7 @@
 
   <!-- card catégorie -->
   <div class="card">
-    <img src="../assets/modifier.png" class="md">
+    <img src="../assets/modifier.png" class="md" (click)="OpenModif()">
     <div class="title">
       <p>Poulet</p>
     </div>

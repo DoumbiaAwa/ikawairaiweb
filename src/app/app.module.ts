@@ -11,7 +11,12 @@ import { AjoutProprietaireComponent } from './ajout-proprietaire/ajout-proprieta
 import { AjoutCategorieComponent } from './ajout-categorie/ajout-categorie.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
-import {MatIconModule} from '@angular/material/icon'
+import {MatIconModule} from '@angular/material/icon';
+import { ModifierCategorieComponent } from './modifier-categorie/modifier-categorie.component';
+import { AccueilProprioComponent } from './proprietaire/accueil-proprio/accueil-proprio.component';
+import { LoginComponent } from './proprietaire/login/login.component';
+import { EmployerProprioComponent } from './proprietaire/employer-proprio/employer-proprio.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,8 +26,12 @@ import {MatIconModule} from '@angular/material/icon'
     ProfilEleveurComponent,
     AjoutProprietaireComponent,
     AjoutCategorieComponent,
+  
+      ModifierCategorieComponent,
+         AccueilProprioComponent,
+         LoginComponent,
+         EmployerProprioComponent,
     
-
   ],
   imports: [
     BrowserModule,

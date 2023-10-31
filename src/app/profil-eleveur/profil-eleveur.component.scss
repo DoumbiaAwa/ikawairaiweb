@@ -205,7 +205,9 @@ h3{
     letter-spacing: -0.31px;
 
 }
-
+.ico{
+  margin-right: 50px;
+}
 .coo {
     color: var(--second, #43535B);
     font-family: Poppins;
@@ -246,3 +248,69 @@ h3{
 .information{
     margin-top: 60px;
 }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  border-radius: 8px;
+  background: var(--white, #FFF);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  margin-top: -80px;
+  margin-left: 50px;
+  width: 200px;
+  height: 260px;
+  margin-top: 3px;
+  position: relative;
+  margin-right: 10px;  /* Ajoutez cette ligne pour positionner les éléments internes */
+}
+.card button img.md {
+  
+  top: 10px;
+  
+}
+.md{
+  margin-left: 80%;
+}
+
+.icon{
+  margin-left: 80px;
+}
+.nbre{
+  margin-left: 40px;
+}
+.butn{
+  border-radius: 8px;
+  background: #F53F3F;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  width: 130px;
+height: 35px;
+flex-shrink: 0;
+color: white;
+margin-left: 4px;
+font-size: 20px;
+}
+
+.ajout {
+  margin-top: 5px; /* Ajustez la marge supérieure selon vos besoins */
+  margin-right: 27%;
+}
+.title{
+  color: #FE8F4A;
+  text-align: center;
+  margin-left: 80px;
+  font-weight: 700;
+  }
+
+  
+  .btn {
+    width: 300px;
+    height: 50px;
+    padding: 6px 0px 6px 8px;
+    border-radius: 10px;
+    background: var(--color1, #48436B);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: #FFF;
+    margin-left: 100%;
+  }
