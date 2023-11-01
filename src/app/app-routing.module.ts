@@ -7,15 +7,21 @@ import { DefauldCategorieComponent } from './defauld-categorie/defauld-categorie
 import { AjoutCategorieComponent } from './ajout-categorie/ajout-categorie.component';
 import { ModifierEmployerComponent } from './modifier-employer/modifier-employer.component';
 import { ModifierCategorieComponent } from './modifier-categorie/modifier-categorie.component';
-
+// import { TabsComponent } from './tabs/tabs.component';
+import { LoginComponent } from './proprietaire/login/login.component';
+import { PrincipalComponent } from './proprietaire/principal/principal.component';
+import { AccueilProprioComponent } from './proprietaire/accueil-proprio/accueil-proprio.component';
+import { EmployerProprioComponent } from './proprietaire/employer-proprio/employer-proprio.component';
 const routes: Routes = [
-
-
   {
-    path: 'accueil-awa',
+    path: '',
     redirectTo: 'accueil-awa',
     pathMatch: 'full'
   },
+  // {
+  //   path: 'tabs', 
+  //   component: TabsComponent 
+  // },
   {
     path: 'accueil-awa', // URL pour la page 'accueil-awa'
     component: AccueilAwaComponent // Charge le composant AccueilAwaComponent
@@ -44,6 +50,22 @@ const routes: Routes = [
   {
     path: 'modifiercate', // URL pour la page 'accueil-awa'
     component: ModifierCategorieComponent// Charge le composant AccueilAwaComponent
+  },
+  {
+    path: 'login', 
+    component: LoginComponent
+  },
+  {
+    path: 'principal', 
+    component: PrincipalComponent
+  },
+  {
+    path: 'proprio', 
+    component: AccueilProprioComponent
+  },
+  {
+    path: 'employer', 
+    component: EmployerProprioComponent
   },
 
 

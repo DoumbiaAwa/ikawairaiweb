@@ -16,6 +16,11 @@ import { ModifierCategorieComponent } from './modifier-categorie/modifier-catego
 import { AccueilProprioComponent } from './proprietaire/accueil-proprio/accueil-proprio.component';
 import { LoginComponent } from './proprietaire/login/login.component';
 import { EmployerProprioComponent } from './proprietaire/employer-proprio/employer-proprio.component';
+import { PrincipalComponent } from './proprietaire/principal/principal.component';
+import { AjoutEmployerComponent } from './proprietaire/ajout-employer/ajout-employer.component';
+import { DetailEmployerComponent } from './proprietaire/detail-employer/detail-employer.component';
+// import { TabsModule } from './tabs/tabs.module';
+// import { TabsComponent } from './tabs/tabs.component';
 
 @NgModule({
   declarations: [
@@ -29,8 +34,12 @@ import { EmployerProprioComponent } from './proprietaire/employer-proprio/employ
   
       ModifierCategorieComponent,
          AccueilProprioComponent,
-         LoginComponent,
+         //LoginComponent,
          EmployerProprioComponent,
+         PrincipalComponent,
+         AjoutEmployerComponent,
+         DetailEmployerComponent,
+         //TabsComponent,
     
   ],
   imports: [
@@ -39,6 +48,8 @@ import { EmployerProprioComponent } from './proprietaire/employer-proprio/employ
     BrowserAnimationsModule,
     MatDialogModule,
     MatIconModule,
+    // TabsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

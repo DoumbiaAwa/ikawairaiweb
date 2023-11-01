@@ -1,0 +1,83 @@
+<div class="container">
+    <div class="left">
+      <img class="logo" src="../assets/logo.png">
+      <div style="margin-right: 40px;">
+        <ul class="custom-list">
+          <!-- Tableau de bord -->
+          <div class="bar" (click)="handleClick('tableauDeBord')" [ngClass]="{'active': menuItems['tableauDeBord']}">
+            <li class="custom-item" routerLink="../proprio">
+              <i class='bx bx-time-five'></i>
+              <span name="tableauDeBord">Tableau de bord</span>
+            </li>
+          </div>
+          <!-- Employer -->
+          <div class="bar" (click)="handleClick('employer')" [ngClass]="{'active': menuItems['employer']}">
+            <li class="custom-item" routerLink="../employer">
+              <i class='bx bx-user'></i>
+              <span name="employer">Employer</span>
+            </li>
+          </div>
+          <!-- Vaccin -->
+          <div class="bar" (click)="handleClick('vaccin')" [ngClass]="{'active': menuItems['vaccin']}">
+            <li class="custom-item" routerLink="../vaccin"> <!-- Remplacez ../vaccin par le lien réel -->
+              <i class="material-symbols-outlined">
+                vaccines
+              </i>
+              <span>Vaccin</span>
+            </li>
+          </div>
+          <!-- Aliment -->
+          <div class="bar" (click)="handleClick('aliments')" [ngClass]="{'active': menuItems['aliments']}">
+            <li class="custom-item" routerLink="../aliments"> <!-- Remplacez ../aliments par le lien réel -->
+              <i><img src="../assets/food.png"></i>
+              <span>Aliments</span>
+            </li>
+          </div>
+          <!-- Catégorie -->
+          <div class="bar" (click)="handleClick('categories')" [ngClass]="{'active': menuItems['categories']}">
+            <li class="custom-item" routerLink="../categories"> <!-- Remplacez ../categories par le lien réel -->
+              <i class='bx bxs-grid-alt'></i>
+              <span>Catégories</span>
+            </li>
+          </div>
+          <!-- Animaux -->
+          <div class="bar" (click)="handleClick('animaux')" [ngClass]="{'active': menuItems['animaux']}">
+
+            <li class="custom-item" routerLink="../animaux"> <!-- Remplacez ../animaux par le lien réel -->
+              <i class="material-symbols-outlined">
+                pets
+              </i>
+              <span>Animaux</span>
+            </li>
+          </div>
+          <!-- Tâche -->
+          <div class="bar" (click)="handleClick('tache')" [ngClass]="{'active': menuItems['tache']}">
+            <li class="custom-item" routerLink="../tache"> <!-- Remplacez ../tache par le lien réel -->
+              <i class='bx bx-edit'></i>
+              <span>Tâche</span>
+            </li>
+          </div>
+          <!-- Ventes -->
+          <div class="bar" (click)="handleClick('ventes')" [ngClass]="{'active': menuItems['ventes']}">
+            <li class="custom-item" routerLink="../ventes"> <!-- Remplacez ../ventes par le lien réel -->
+              <i><img src="../assets/vente.png"></i>
+              <span>Ventes</span>
+            </li>
+          </div>
+          <!-- Notification -->
+          <div class="bar" (click)="handleClick('notification')" [ngClass]="{'active': menuItems['notification']}">
+            <li class="custom-item">
+              <i class='bx bxs-bell-ring'></i>
+              <span>Notification</span>
+            </li>
+          </div>
+        </ul>
+      </div>
+    </div>
+    <div class="droite">
+      <div class="bord">
+        <p class="text">Tableau de bord</p>
+      </div>
+    </div>
+  </div>
+<router-outlet></router-outlet>
