@@ -11,7 +11,13 @@ import { ModifierCategorieComponent } from './modifier-categorie/modifier-catego
 import { LoginComponent } from './proprietaire/login/login.component';
 import { PrincipalComponent } from './proprietaire/principal/principal.component';
 import { AccueilProprioComponent } from './proprietaire/accueil-proprio/accueil-proprio.component';
-import { EmployerProprioComponent } from './proprietaire/employer-proprio/employer-proprio.component';
+import { EmployerProprioComponent } from './proprietaire/employer/ajout-employer/employer-proprio/employer-proprio.component';
+import { AjoutEmployerComponent } from './proprietaire/employer/ajout-employer/ajout-employer.component';
+import { DetailEmployerComponent } from './proprietaire/employer/ajout-employer/detail-employer/detail-employer.component';
+import { ModifierComponent } from './proprietaire/employer/ajout-employer/modifier/modifier.component';
+import { PageVaccinComponent } from './proprietaire/vaccin/page-vaccin/page-vaccin.component';
+import { AjoutVaccinComponent } from './proprietaire/vaccin/ajout-vaccin/ajout-vaccin.component';
+import { ChoixRaceComponent } from './proprietaire/vaccin/choix-race/choix-race.component';
 const routes: Routes = [
   {
     path: '',
@@ -52,20 +58,44 @@ const routes: Routes = [
     component: ModifierCategorieComponent// Charge le composant AccueilAwaComponent
   },
   {
-    path: 'login', 
+    path: 'login',
     component: LoginComponent
   },
   {
-    path: 'principal', 
+    path: 'principal',
     component: PrincipalComponent
   },
   {
-    path: 'proprio', 
+    path: 'proprio',
     component: AccueilProprioComponent
   },
   {
-    path: 'employer', 
+    path: 'employer',
     component: EmployerProprioComponent
+  },
+  {
+    path: 'ajout-employer',
+    component: AjoutEmployerComponent
+  },
+  {
+    path: 'details-employer',
+    component: DetailEmployerComponent
+  },
+  {
+    path: 'modifier',
+    component: ModifierComponent
+  },
+  {
+    path: 'vaccin',
+    component: PageVaccinComponent
+  },
+  {
+    path: 'ajout-vaccin',
+    component: AjoutVaccinComponent
+  },
+  {
+    path: 'choix-race',
+    component:ChoixRaceComponent
   },
 
 

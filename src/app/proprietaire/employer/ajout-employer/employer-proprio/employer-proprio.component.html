@@ -1,0 +1,58 @@
+<app-principal></app-principal>
+
+<div class="container">
+    <div class="left">
+    
+    </div>
+
+    <div class="droite">
+
+        <div class="ti">
+            <h1>Mes Employés</h1>
+          </div>
+          <div class="recherche">
+          <input type="search" placeholder="Recherche..."/>
+          <button>Rechercher</button>
+        </div>
+<!-- liste des employer -->
+<div>
+    <table>
+      <thead>
+          <tr>
+               <th></th>
+              <th>Avatar</th>
+              <th>Nom Complet</th>
+              <th>Contact</th>
+              <th>Email</th>
+              <th>Adresse</th>
+              <th>Action</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td ><input type="checkbox" class="check" ></td>
+              <td><img src="../assets/user.png"></td>
+              <td>Jane Smith</td>
+              <td>987-654-3210</td>
+              <td>jane.smith@example.com</td>
+              <td>456 Elm St, Town</td>
+              <td><button class="pr" (click)="afficherDetail()">voir profil</button></td>
+          </tr>
+        
+      </tbody>
+  </table>
+  
+   </div>
+    <!-- le bouton ajout -->
+    <div class="ajout">
+        <button class="btn" (click)="openDialog()">
+          Ajouter un employer
+          <img class="ico" src="./assets/ajout.png"style="float: right;">
+        </button>
+      </div>
+    </div>
+</div>
+
+
+
+

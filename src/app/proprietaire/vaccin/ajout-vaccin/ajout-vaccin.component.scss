@@ -1,0 +1,80 @@
+.iptform{
+    display: flex;
+    width: 397.824px;
+    height: 20px;
+    padding: 11.865px 16.611px 11.865px 23.73px;
+    align-items: center;
+    gap: 7.91px;
+    flex-shrink: 0;
+    border-radius: 5px;
+border: 0.791px solid #D2CECE;
+background: var(--white, #FFF);   
+max-width: 400px;
+margin-bottom: 10px; 
+}
+.enregistrer{
+    display: flex;
+    width: 388px;
+    padding: 14.351px 144px 14.649px 165px;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 10px;
+background: #FE8F4A;
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+color: #FFF;
+}
+.annule{
+    display: flex;
+    width: 388px;
+    padding: 14.351px 0px 14.649px 0px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+background: #F53F3F;
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+color: #FFF;
+margin-top: 7px;
+
+}
+.action{
+    margin-top: 20PX;
+    margin-left: 25px;
+    
+    }
+    .btn {
+        display: flex; /* Use flexbox */
+        justify-content: center; /* Horizontally center the content */
+        align-items: center; /* Vertically center the content */
+        width: 200px;
+        height: 40px;
+        padding: 6px 8px; /* Adjust padding if needed */
+        border-radius: 10px;
+        background: var(--color1, #48436B);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        margin-left: 130px;
+        margin-top: 10px;
+        color: #FFF;
+        font-weight: bold;
+    }
+    
+    .btn img {
+        margin-left: 8px; /* Add some space between the text and the image */
+    }
+    
+.conteneur{
+    margin-left: 10px;
+    width: 460px;
+    height: 500px;
+    padding: 16px 38px 15px 38px;
+    border-radius: 10px;
+background: var(--white, #FFF);
+ box-shadow: 0px 4px 4px 0px rgba(33, 40, 66, 0.20);
+ margin-top: 20px;
+    
+}
+.image{
+    margin-left: 140PX;
+}
+.ico{
+margin-left: 90px;
+}

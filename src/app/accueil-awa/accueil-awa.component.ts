@@ -12,7 +12,7 @@ export class AccueilAwaComponent {
   openDialog(): void {
     const dialogRef = this.dialog.open(AjoutProprietaireComponent, {
       width: '528px',
-      height: '96', // Définissez la largeur de la boîte de dialogue
+      height: '500px', // Définissez la largeur de la boîte de dialogue
     });
   
     dialogRef.afterClosed().subscribe(result => {

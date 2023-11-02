@@ -1,0 +1,79 @@
+.card {
+    display: flex;
+    flex-direction: row;
+    width: 335px;
+    height: 179px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid var(--black, #D9D9D9);
+    background: var(--white, #FFF);
+    
+}
+
+.image {
+    display: flex;
+
+}
+
+.image img {
+    width: 80px;
+    height: 80px;
+}
+
+.info {
+    max-width: 800px; /* Définir la largeur maximale à 200px */
+    max-height: 100px; /* Définir la hauteur maximale à 100px */
+    // overflow: hidden; /* Cacher le contenu qui dépasse la hauteur maximale */
+    white-space: nowrap; /* Éviter le texte de se casser sur plusieurs lignes */
+    text-overflow: ellipsis; /* Ajouter des points de suspension (...) en cas de dépassement */
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+
+.action {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+     margin-top: 30px; 
+    margin-right: 60%;/* Ajouter de l'espace à gauche des boutons */
+}
+
+.supp {
+    border-radius: 5px;
+    background: var(--color2, #ED8A73);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 6px 10px;
+    margin-right: 30px;
+    width: 100px;
+}
+
+.modif {
+    border-radius: 5px;
+    background: var(--white, #FFF);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 6px 10px;
+    width: 100px;
+}
+
+h2 {
+    color: var(--second, #43535B);
+    font-family: Inter;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -0.41px;
+    margin: 0; /* Supprimer la marge autour du titre */
+}
+
+p {
+    color: var(--second, #43535B);
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+    margin: 0; /* Supprimer la marge autour du texte */
+}

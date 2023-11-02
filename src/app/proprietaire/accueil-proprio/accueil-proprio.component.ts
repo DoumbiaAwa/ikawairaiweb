@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { BaseChartDirective } from 'ng2-charts';
+import { MatDialog } from '@angular/material/dialog';
+import { EmployerProprioComponent } from '../employer/ajout-employer/employer-proprio/employer-proprio.component';
 
 @Component({
   selector: 'app-accueil-proprio',
@@ -7,14 +8,13 @@ import { BaseChartDirective } from 'ng2-charts';
   styleUrls: ['./accueil-proprio.component.scss']
 })
 export class AccueilProprioComponent {
-//   @ViewChild(BaseChartDirective) chart: BaseChartDirective;
+  //   @ViewChild(BaseChartDirective) chart: BaseChartDirective;
 
-// ngOnInit() {
-//   this.chart.data = [20, 15, 10, 5, 25];
-//   this.chart.labels = ['Chat', 'Chien', 'Lapin', 'Oiseau', 'Autres'];
-//   this.chart.options = /* ...your options... */;
-//   this.chart.legend = true;
-//   this.chart.chartType = 'bar';
+  // ngOnInit() {
+  //   this.chart.data = [20, 15, 10, 5, 25];
+  //   this.chart.labels = ['Chat', 'Chien', 'Lapin', 'Oiseau', 'Autres'];
+  //   this.chart.options = /* ...your options... */;
+  //   this.chart.legend = true;
+  //   this.chart.chartType = 'bar';
+
 }
-
-
