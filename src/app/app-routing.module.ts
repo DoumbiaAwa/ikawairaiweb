@@ -18,6 +18,7 @@ import { ModifierComponent } from './proprietaire/employer/ajout-employer/modifi
 import { PageVaccinComponent } from './proprietaire/vaccin/page-vaccin/page-vaccin.component';
 import { AjoutVaccinComponent } from './proprietaire/vaccin/ajout-vaccin/ajout-vaccin.component';
 import { ChoixRaceComponent } from './proprietaire/vaccin/choix-race/choix-race.component';
+import { DetailVaccinComponent } from './proprietaire/vaccin/detail-vaccin/detail-vaccin.component';
 const routes: Routes = [
   {
     path: '',
@@ -97,6 +98,11 @@ const routes: Routes = [
     path: 'choix-race',
     component:ChoixRaceComponent
   },
+  {
+    path: 'detail-vaccin',
+    component:DetailVaccinComponent
+  },
+
 
 
 ];

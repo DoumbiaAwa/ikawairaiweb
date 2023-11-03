@@ -24,6 +24,8 @@ import { AjoutVaccinComponent } from './proprietaire/vaccin/ajout-vaccin/ajout-v
 import { DetailVaccinComponent } from './proprietaire/vaccin/detail-vaccin/detail-vaccin.component';
 import { ModifierComponent } from './proprietaire/employer/ajout-employer/modifier/modifier.component';
 import { ChoixRaceComponent } from './proprietaire/vaccin/choix-race/choix-race.component';
+import { PageAlimentComponent } from './proprietaire/aliment/page-aliment/page-aliment.component';
+import { AjoutAlimentComponent } from './proprietaire/aliment/ajout-aliment/ajout-aliment.component';
 // import { TabsModule } from './tabs/tabs.module';
 // import { TabsComponent } from './tabs/tabs.component';
 
@@ -49,6 +51,8 @@ import { ChoixRaceComponent } from './proprietaire/vaccin/choix-race/choix-race.
     DetailVaccinComponent,
     ModifierComponent,
     ChoixRaceComponent,
+    PageAlimentComponent,
+    AjoutAlimentComponent,
     //TabsComponent,
 
   ],
