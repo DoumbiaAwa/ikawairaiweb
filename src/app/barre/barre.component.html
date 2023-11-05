@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="left">
+        <img class="logo" src="../assets/logo.png">
+        <div style="margin-right: 40px;">
+            <ul class="custom-list">
+                <!-- Liste des employés -->
+                <li class="custom-item">
+                    <div class="bar" [routerLink]="['/accueil-awa']" routerLinkActive="active">
+                        <i class='bx bx-time-five'></i>
+                        <span name="liste">Liste des Employés</span>
+                    </div>
+                </li>
+                <!-- Categorie -->
+                <li class="custom-item">
+                    <div class="bar" [routerLink]="['/defauld']" routerLinkActive="active">
+                        <i class='bx bx-user'></i>
+                        <span name="categori">Categorie</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+        <div class="droite">
+            <div class="bord">
+                <p class="text">Tableau de bord</p>
+            </div>
+        </div>
+   
+</div>

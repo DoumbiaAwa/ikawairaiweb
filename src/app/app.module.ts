@@ -39,6 +39,7 @@ import { EmployerProprioComponent } from './proprietaire/employer/employer-propr
 import { DetailEmployerComponent } from './proprietaire/employer/detail-employer/detail-employer.component';
 import { ModifierComponent } from './proprietaire/employer/modifier/modifier.component';
 import { ModifierVenteComponent } from './proprietaire/vente/modifier-vente/modifier-vente.component';
+import { BarreComponent } from './barre/barre.component';
 // import { TabsModule } from './tabs/tabs.module';
 // import { TabsComponent } from './tabs/tabs.component';
 
@@ -79,6 +80,7 @@ import { ModifierVenteComponent } from './proprietaire/vente/modifier-vente/modi
     PageNotifComponent,
     NotifPerteComponent,
     ModifierVenteComponent,
+    BarreComponent,
     //TabsComponent,
 
   ],

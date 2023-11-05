@@ -34,6 +34,7 @@ import { DetailVenteComponent } from './proprietaire/vente/detail-vente/detail-v
 import { ModifierVenteComponent } from './proprietaire/vente/modifier-vente/modifier-vente.component';
 import { PageNotifComponent } from './proprietaire/notification/page-notif/page-notif.component';
 import { NotifPerteComponent } from './proprietaire/notification/notif-perte/notif-perte.component';
+import { BarreComponent } from './barre/barre.component';
 
 const routes: Routes = [
   {
@@ -177,6 +178,10 @@ const routes: Routes = [
   {
     path: 'perte',
     component:NotifPerteComponent 
+  },
+  {
+    path: 'barre',
+    component:BarreComponent
   },
 
 
