@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { EmployerProprioComponent } from '../employer/ajout-employer/employer-proprio/employer-proprio.component';
+import { EmployerProprioComponent } from '../employer/employer-proprio/employer-proprio.component';
 
 @Component({
   selector: 'app-accueil-proprio',

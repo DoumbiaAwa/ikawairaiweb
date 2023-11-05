@@ -1,1 +1,58 @@
-<p>page-vente works!</p>
+<app-principal></app-principal>
+
+<div class="container">
+    <div class="left">
+    
+    </div>
+
+    <div class="droite">
+
+        <div class="ti">
+            <h1>Mes Ventes </h1>
+          </div>
+          <div class="recherche">
+          <input type="search" placeholder="Recherche..."/>
+          <button>Rechercher</button>
+        </div>
+<!-- liste des vents-->
+<div>
+    <table>
+      <thead>
+          <tr>
+               <th></th>
+              <th>Avatar</th>
+              <th>Catégorie</th>
+              <th>Quantité</th>
+              <th>Prix unitaire</th>
+              <th>Race</th>
+              <th>Action</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td ><input type="checkbox" class="check" ></td>
+              <td><img src="../assets/patte.png" class="pat"></td>
+              <td>Mouton</td>
+              <td>98</td>
+              <td>100 000</td>
+              <td>Belge</td>
+              <td><button class="pr" (click)="detailVente()">voir détail</button></td>
+          </tr>
+        
+      </tbody>
+  </table>
+  
+   </div>
+    <!-- le bouton ajout -->
+    <div class="ajout">
+        <button class="btn" (click)="openDialog()">
+          Ajouter une Vente
+          <img class="ico" src="./assets/ajout.png"style="float: right;">
+        </button>
+      </div>
+    </div>
+</div>
+
+
+
+

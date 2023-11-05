@@ -1,1 +1,29 @@
-<p>detail-vente works!</p>
+<div class="container">
+<img src="../assets/cloose.png">
+<form>
+   <div class="form-group">
+    <label>Quantité</label>
+    <input type="number" placeholder="97">
+   </div>
+
+   <div class="form-group">
+    <label>Nombres de ventes</label>
+    <input type="number" placeholder="10">
+   </div>
+</form>
+<!-- prix -->
+
+<h1 class="total" >
+ Total Prix: 100 000
+</h1>
+
+
+<div class="action">
+    <div>
+        <button class="modifier" (click)="openDialog($event)">Modifier</button>
+    </div>
+    <div>
+        <button class="supprimer">Supprimer</button>
+    </div>
+</div>
+</div>

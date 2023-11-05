@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { AjoutEmployerComponent } from '../ajout-employer.component';
 import { DetailEmployerComponent } from '../detail-employer/detail-employer.component';
+import { AjoutEmployerComponent } from '../ajout-employer/ajout-employer.component';
 @Component({
   selector: 'app-employer-proprio',
   templateUrl: './employer-proprio.component.html',

@@ -15,14 +15,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { ModifierCategorieComponent } from './modifier-categorie/modifier-categorie.component';
 import { AccueilProprioComponent } from './proprietaire/accueil-proprio/accueil-proprio.component';
 import { LoginComponent } from './proprietaire/login/login.component';
-import { EmployerProprioComponent } from './proprietaire/employer/ajout-employer/employer-proprio/employer-proprio.component';
 import { PrincipalComponent } from './proprietaire/principal/principal.component';
 import { AjoutEmployerComponent } from './proprietaire/employer/ajout-employer/ajout-employer.component';
-import { DetailEmployerComponent } from './proprietaire/employer/ajout-employer/detail-employer/detail-employer.component';
 import { PageVaccinComponent } from './proprietaire/vaccin/page-vaccin/page-vaccin.component';
 import { AjoutVaccinComponent } from './proprietaire/vaccin/ajout-vaccin/ajout-vaccin.component';
 import { DetailVaccinComponent } from './proprietaire/vaccin/detail-vaccin/detail-vaccin.component';
-import { ModifierComponent } from './proprietaire/employer/ajout-employer/modifier/modifier.component';
 import { ChoixRaceComponent } from './proprietaire/vaccin/choix-race/choix-race.component';
 import { PageAlimentComponent } from './proprietaire/aliment/page-aliment/page-aliment.component';
 import { AjoutAlimentComponent } from './proprietaire/aliment/ajout-aliment/ajout-aliment.component';
@@ -38,6 +35,10 @@ import { AjoutVenteComponent } from './proprietaire/vente/ajout-vente/ajout-vent
 import { DetailVenteComponent } from './proprietaire/vente/detail-vente/detail-vente.component';
 import { PageNotifComponent } from './proprietaire/notification/page-notif/page-notif.component';
 import { NotifPerteComponent } from './proprietaire/notification/notif-perte/notif-perte.component';
+import { EmployerProprioComponent } from './proprietaire/employer/employer-proprio/employer-proprio.component';
+import { DetailEmployerComponent } from './proprietaire/employer/detail-employer/detail-employer.component';
+import { ModifierComponent } from './proprietaire/employer/modifier/modifier.component';
+import { ModifierVenteComponent } from './proprietaire/vente/modifier-vente/modifier-vente.component';
 // import { TabsModule } from './tabs/tabs.module';
 // import { TabsComponent } from './tabs/tabs.component';
 
@@ -77,6 +78,7 @@ import { NotifPerteComponent } from './proprietaire/notification/notif-perte/not
     DetailVenteComponent,
     PageNotifComponent,
     NotifPerteComponent,
+    ModifierVenteComponent,
     //TabsComponent,
 
   ],

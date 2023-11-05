@@ -58,14 +58,14 @@
             </li>
           </div>
           <!-- Ventes -->
-          <div class="bar" (click)="handleClick('ventes')" [ngClass]="{'active': menuItems['ventes']}">
+          <div class="bar" [routerLink]="['/vente']" routerLinkActive="active">
             <li class="custom-item" routerLink="../ventes"> <!-- Remplacez ../ventes par le lien réel -->
               <i><img src="../assets/vente.png"></i>
               <span>Ventes</span>
             </li>
           </div>
           <!-- Notification -->
-          <div class="bar" (click)="handleClick('notification')" [ngClass]="{'active': menuItems['notification']}">
+          <div class="bar"[routerLink]="['/notification']" routerLinkActive="active">
             <li class="custom-item">
               <i class='bx bxs-bell-ring'></i>
               <span>Notification</span>

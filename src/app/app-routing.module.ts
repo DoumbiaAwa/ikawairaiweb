@@ -8,13 +8,13 @@ import { AjoutCategorieComponent } from './ajout-categorie/ajout-categorie.compo
 import { ModifierEmployerComponent } from './modifier-employer/modifier-employer.component';
 import { ModifierCategorieComponent } from './modifier-categorie/modifier-categorie.component';
 // import { TabsComponent } from './tabs/tabs.component';
+import { EmployerProprioComponent } from './proprietaire/employer/employer-proprio/employer-proprio.component';
+import { DetailEmployerComponent } from './proprietaire/employer/detail-employer/detail-employer.component';
 import { LoginComponent } from './proprietaire/login/login.component';
 import { PrincipalComponent } from './proprietaire/principal/principal.component';
 import { AccueilProprioComponent } from './proprietaire/accueil-proprio/accueil-proprio.component';
-import { EmployerProprioComponent } from './proprietaire/employer/ajout-employer/employer-proprio/employer-proprio.component';
 import { AjoutEmployerComponent } from './proprietaire/employer/ajout-employer/ajout-employer.component';
-import { DetailEmployerComponent } from './proprietaire/employer/ajout-employer/detail-employer/detail-employer.component';
-import { ModifierComponent } from './proprietaire/employer/ajout-employer/modifier/modifier.component';
+import { ModifierComponent } from './proprietaire/employer/modifier/modifier.component';
 import { PageVaccinComponent } from './proprietaire/vaccin/page-vaccin/page-vaccin.component';
 import { AjoutVaccinComponent } from './proprietaire/vaccin/ajout-vaccin/ajout-vaccin.component';
 import { ChoixRaceComponent } from './proprietaire/vaccin/choix-race/choix-race.component';
@@ -31,6 +31,10 @@ import { AjoutTacheComponent } from './proprietaire/tache/ajout-tache/ajout-tach
 import { PageVenteComponent } from './proprietaire/vente/page-vente/page-vente.component';
 import { AjoutVenteComponent } from './proprietaire/vente/ajout-vente/ajout-vente.component';
 import { DetailVenteComponent } from './proprietaire/vente/detail-vente/detail-vente.component';
+import { ModifierVenteComponent } from './proprietaire/vente/modifier-vente/modifier-vente.component';
+import { PageNotifComponent } from './proprietaire/notification/page-notif/page-notif.component';
+import { NotifPerteComponent } from './proprietaire/notification/notif-perte/notif-perte.component';
+
 const routes: Routes = [
   {
     path: '',
@@ -149,6 +153,30 @@ const routes: Routes = [
   {
     path: 'ajout-tache',
     component: AjoutTacheComponent
+  },
+  {
+    path: 'vente',
+    component: PageVenteComponent
+  },
+  {
+    path: 'ajout-vente',
+    component: AjoutVenteComponent
+  },
+  {
+    path: 'detail-vente',
+    component: DetailVenteComponent
+  },
+  {
+    path: 'modifier-vente',
+    component: ModifierVenteComponent
+  },
+  {
+    path: 'notification',
+    component: PageNotifComponent
+  },
+  {
+    path: 'perte',
+    component:NotifPerteComponent 
   },
 
 
