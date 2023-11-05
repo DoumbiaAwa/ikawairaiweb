@@ -1,1 +1,35 @@
-<p>ajout-aliment works!</p>
+<div class="conteneur">
+    <div class="image">
+        <img src="../assets/aliment (2).png" alt="" class="ico">
+        <h1>Ajouter un Aliment</h1>
+    </div>
+    <form>
+        <div class="form-group">
+            <label for="nomComplet">Nom</label>
+            <input type="text" id="nom" name="nom" placeholder="Nom du vaccin" class="iptform">
+        </div>
+        <div class="form-group">
+            <label for="quantite">Quantité</label>
+            <input type="text" id="quantite" name="quantite" placeholder="Quantité" class="iptform">
+        </div>
+        <div class="form-group">
+            <label for="unite">Unité</label>
+            <select id="unite" name="unite" class="iptform">
+                <option value="kilo">Kilo</option>
+                <option value="sac">Sac</option>
+                <option value="herbe">Herbe</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="prix">Prix</label>
+            <input type="text" id="prix" name="prix" placeholder="Prix" class="iptform">
+        </div>
+        <div class="ajout">
+            <button class="btn" (click)="openDialog($event)">Choix races<img src="./assets/ajout.png"></button>
+        </div>
+        <div class="action">
+            <button class="enregistrer">Enregistrer</button>
+            <button class="annule">Annuler</button>
+        </div>
+    </form>
+</div>

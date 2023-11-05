@@ -1,0 +1,42 @@
+<app-principal></app-principal>
+
+<div class="container">
+    <div class="left">
+
+    </div>
+    <div class="droite">
+        <div class="ti">
+            <h1>Mes Tâches</h1>
+          </div>
+          <div class="recherche">
+          <input type="search" placeholder="Recherche..."/>
+          <button>Rechercher</button>
+        </div>
+
+         <!-- card tache -->
+         <div class="card">
+            <div class="contenu">
+                <i class='bx bx-edit'></i>
+                <div class="info-tache">
+                    <label for="task1">Titre</label>
+                    <input type="checkbox" class="check">
+                </div>
+            </div>
+            <div class="des">
+                <p>This application is designed for super shops. 
+                    By using this application they can enlist
+                     all their products in one place and can deliver. Customers will get a one-stop solution for their daily shopping.</p>
+            </div>
+        </div>
+       
+        <!-- le bouton ajout -->
+    <div class="ajout">
+        <button class="btn" (click)="openDialog()">
+          Ajouter une tâche
+          <img class="ico" src="./assets/ajout.png"style="float: right;">
+        </button>
+      </div>
+        </div>
+       
+        </div>
+    

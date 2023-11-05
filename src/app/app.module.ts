@@ -26,6 +26,18 @@ import { ModifierComponent } from './proprietaire/employer/ajout-employer/modifi
 import { ChoixRaceComponent } from './proprietaire/vaccin/choix-race/choix-race.component';
 import { PageAlimentComponent } from './proprietaire/aliment/page-aliment/page-aliment.component';
 import { AjoutAlimentComponent } from './proprietaire/aliment/ajout-aliment/ajout-aliment.component';
+import { PageCategorieComponent } from './proprietaire/categorie/page-categorie/page-categorie.component';
+import { DetailCategorieComponent } from './proprietaire/categorie/detail-categorie/detail-categorie.component';
+import { PageAnimauxComponent } from './proprietaire/animaux/page-animaux/page-animaux.component';
+import { DetailAnimalComponent } from './proprietaire/animaux/modifier-animal/detail-animal.component';
+import { AjoutAnimalComponent } from './proprietaire/animaux/ajout-animal/ajout-animal.component';
+import { PageTacheComponent } from './proprietaire/tache/page-tache/page-tache.component';
+import { AjoutTacheComponent } from './proprietaire/tache/ajout-tache/ajout-tache.component';
+import { PageVenteComponent } from './proprietaire/vente/page-vente/page-vente.component';
+import { AjoutVenteComponent } from './proprietaire/vente/ajout-vente/ajout-vente.component';
+import { DetailVenteComponent } from './proprietaire/vente/detail-vente/detail-vente.component';
+import { PageNotifComponent } from './proprietaire/notification/page-notif/page-notif.component';
+import { NotifPerteComponent } from './proprietaire/notification/notif-perte/notif-perte.component';
 // import { TabsModule } from './tabs/tabs.module';
 // import { TabsComponent } from './tabs/tabs.component';
 
@@ -53,6 +65,18 @@ import { AjoutAlimentComponent } from './proprietaire/aliment/ajout-aliment/ajou
     ChoixRaceComponent,
     PageAlimentComponent,
     AjoutAlimentComponent,
+    PageCategorieComponent,
+    DetailCategorieComponent,
+    PageAnimauxComponent,
+    DetailAnimalComponent,
+    AjoutAnimalComponent,
+    PageTacheComponent,
+    AjoutTacheComponent,
+    PageVenteComponent,
+    AjoutVenteComponent,
+    DetailVenteComponent,
+    PageNotifComponent,
+    NotifPerteComponent,
     //TabsComponent,
 
   ],

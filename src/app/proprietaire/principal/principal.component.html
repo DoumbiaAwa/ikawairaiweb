@@ -27,21 +27,21 @@
             </li>
           </div>
           <!-- Aliment -->
-          <div class="bar" (click)="handleClick('aliments')" [ngClass]="{'active': menuItems['aliments']}">
+          <div class="bar" [routerLink]="['/aliment']" routerLinkActive="active">
             <li class="custom-item" routerLink="../aliments"> <!-- Remplacez ../aliments par le lien réel -->
               <i><img src="../assets/food.png"></i>
               <span>Aliments</span>
             </li>
           </div>
           <!-- Catégorie -->
-          <div class="bar" (click)="handleClick('categories')" [ngClass]="{'active': menuItems['categories']}">
+          <div class="bar"  [routerLink]="['/categorie']" routerLinkActive="active">
             <li class="custom-item" routerLink="../categories"> <!-- Remplacez ../categories par le lien réel -->
               <i class='bx bxs-grid-alt'></i>
               <span>Catégories</span>
             </li>
           </div>
           <!-- Animaux -->
-          <div class="bar" (click)="handleClick('animaux')" [ngClass]="{'active': menuItems['animaux']}">
+          <div class="bar"  [routerLink]="['/animal']" routerLinkActive="active">
 
             <li class="custom-item" routerLink="../animaux"> <!-- Remplacez ../animaux par le lien réel -->
               <i class="material-symbols-outlined">
@@ -51,7 +51,7 @@
             </li>
           </div>
           <!-- Tâche -->
-          <div class="bar" (click)="handleClick('tache')" [ngClass]="{'active': menuItems['tache']}">
+          <div class="bar" [routerLink]="['/tache']" routerLinkActive="active">
             <li class="custom-item" routerLink="../tache"> <!-- Remplacez ../tache par le lien réel -->
               <i class='bx bx-edit'></i>
               <span>Tâche</span>

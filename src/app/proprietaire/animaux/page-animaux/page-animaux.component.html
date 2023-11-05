@@ -1,0 +1,70 @@
+<app-principal></app-principal>
+
+<div class="container">
+    <div class="left">
+
+    </div>
+    <div class="droite">
+        <div class="ti">
+            <h1>Mes Animaux</h1>
+          </div>
+          <div class="recherche">
+          <input type="search" placeholder="Recherche..."/>
+          <button>Rechercher</button>
+        </div>
+
+        <!-- card animaux -->
+        <div class="carte">
+        <div class="card">
+            <div class="contenu">
+            <div class="icon">
+            <img src="./assets/coq.png" style="width: 50px; height: 50px;">
+            <div class="tx">
+            <h2>Pondeuse</h2>
+            <P>Catégorie: poulet</P>
+           </div>
+        </div>
+            <div class="modifier">
+            <img src="../assets/modifier.png" class="modif" (click)="openModifier()">
+             </div>
+            <!-- liste -->
+            <div class="animal-info">
+                <p class="anl">Nombres: 20</p>
+                <ul>
+                    <li class="columns">
+                        <div class="column">
+                            <span class="column-title">Etat</span>
+                            <ul>
+                                <li>Non définis: 20</li>
+                                <li>Enceinte: 0</li>
+                                <li>Non enceinte: 0</li>
+                            </ul>
+                        </div>
+                        <div class="colum">
+                            <span class="column-title">Sexe</span>
+                            <ul>
+                                <li>Mâle: 10</li>
+                                <li>Femelle:  10</li>
+                                <li>Mixte: 0</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="age">Age: 1-3 ans</li>
+                </ul>
+            </div>
+        </div>
+        </div>
+        
+        </div>
+
+        <!-- le bouton ajout -->
+    <div class="ajout">
+        <button class="btn" (click)=" openDialog()">
+          Ajouter un aliment
+          <img class="ico" src="./assets/ajout.png"style="float: right;">
+        </button>
+      </div>
+        </div>
+       
+        </div>
+    

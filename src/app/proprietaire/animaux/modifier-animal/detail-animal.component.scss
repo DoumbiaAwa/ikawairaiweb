@@ -1,0 +1,92 @@
+.iptform{
+    display: flex;
+    width: 350px;
+    height: 20px;
+    padding: 11.865px 16.611px 11.865px 23.73px;
+    align-items: center;
+    gap: 7.91px;
+    flex-shrink: 0;
+    border-radius: 5px;
+border: 0.791px solid #D2CECE;                                     
+background: var(--white, #FFF);   
+max-width: 400px;
+margin-bottom: 10px; 
+}
+select{
+    display: flex;
+    width: 397px;
+    height: 40px;
+    padding: 11.865px 16.611px 11.865px 23.73px;
+    align-items: center;
+    gap: 7.91px;
+    flex-shrink: 0;
+    border-radius: 5px;
+border: 0.791px solid #D2CECE;                                     
+background: var(--white, #FFF);   
+max-width: 400px;
+margin-bottom: 10px; 
+}
+
+.enregistrer{
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+background: #48436B;
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+color: #FFF;
+margin-left: 85px;
+}
+    
+.conteneur{
+    margin-left: 10px;
+    width: 400px;
+    height: 550px;
+    padding: 16px 38px 15px 38px;
+    border-radius: 10px;
+background: var(--white, #FFF);
+ box-shadow: 0px 4px 4px 0px rgba(33, 40, 66, 0.20);
+
+    
+}
+
+.bx bx-x{
+
+}
+.image{
+    margin-left: 120PX;
+    margin-top: -25px;
+}
+.ico {
+    width: 40px; 
+    height: 40px; 
+    margin-left: 70px;
+}
+h1{
+font-size: 15px;
+margin-left: 15px;
+}
+.iptform input, .iptform select {
+    display: flex;
+    width: 100%;
+    height: 20px;
+    padding: 11.865px 16.611px 11.865px 23.73px;
+    align-items: center;
+    gap: 7.91px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 0.791px solid #D2CECE;
+    background: var(--white, #FFF);
+    max-width: 400px;
+    margin-bottom: 10px;
+}
+
+
+/* Style pour les champs select */
+.iptform select {
+    width: 100%;
+    height: 20px;
+}
+form{
+margin-top: -10px;
+}
+

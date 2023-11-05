@@ -38,12 +38,17 @@
     flex-shrink: 0;
     border: 2px solid var(--white, #FFF);
     background: rgba(229, 239, 255, 0.05);
+    position: fixed; /* Fixe la colonne à gauche de l'écran */
+    overflow-y: auto; /* Ajoute une barre de défilement vertical si le contenu dépasse */
+    cursor: pointer; /* Change le curseur en pointeur */
+
 }
 
 /* Ajustez la largeur de la colonne droite pour aligner les éléments en haut */
 .droite {
     width: 85%; /* Utilisez 85% pour la colonne droite pour aligner en haut */
     height: 832px;
+    margin-left: 18%;
 }
 
 span{
@@ -71,6 +76,7 @@ a:hover {
     width: 90%;
     height: 25px;
     margin-top: 30px;
+
 }
 
 .text {

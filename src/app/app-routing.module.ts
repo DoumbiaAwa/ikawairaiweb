@@ -19,6 +19,18 @@ import { PageVaccinComponent } from './proprietaire/vaccin/page-vaccin/page-vacc
 import { AjoutVaccinComponent } from './proprietaire/vaccin/ajout-vaccin/ajout-vaccin.component';
 import { ChoixRaceComponent } from './proprietaire/vaccin/choix-race/choix-race.component';
 import { DetailVaccinComponent } from './proprietaire/vaccin/detail-vaccin/detail-vaccin.component';
+import { PageAlimentComponent } from './proprietaire/aliment/page-aliment/page-aliment.component';
+import { AjoutAlimentComponent } from './proprietaire/aliment/ajout-aliment/ajout-aliment.component';
+import { PageCategorieComponent } from './proprietaire/categorie/page-categorie/page-categorie.component';
+import { DetailCategorieComponent } from './proprietaire/categorie/detail-categorie/detail-categorie.component';
+import { PageAnimauxComponent } from './proprietaire/animaux/page-animaux/page-animaux.component';
+import { DetailAnimalComponent } from './proprietaire/animaux/modifier-animal/detail-animal.component';
+import { AjoutAnimalComponent } from './proprietaire/animaux/ajout-animal/ajout-animal.component';
+import { PageTacheComponent } from './proprietaire/tache/page-tache/page-tache.component';
+import { AjoutTacheComponent } from './proprietaire/tache/ajout-tache/ajout-tache.component';
+import { PageVenteComponent } from './proprietaire/vente/page-vente/page-vente.component';
+import { AjoutVenteComponent } from './proprietaire/vente/ajout-vente/ajout-vente.component';
+import { DetailVenteComponent } from './proprietaire/vente/detail-vente/detail-vente.component';
 const routes: Routes = [
   {
     path: '',
@@ -96,12 +108,49 @@ const routes: Routes = [
   },
   {
     path: 'choix-race',
-    component:ChoixRaceComponent
+    component: ChoixRaceComponent
   },
   {
     path: 'detail-vaccin',
-    component:DetailVaccinComponent
+    component: DetailVaccinComponent
   },
+  {
+    path: 'aliment',
+    component: PageAlimentComponent
+  },
+  {
+    path: 'ajout-aliment',
+    component: AjoutAlimentComponent
+  },
+  {
+    path: 'categorie',
+    component: PageCategorieComponent
+  },
+  {
+    path: 'detail-categorie',
+    component: DetailCategorieComponent
+  },
+  {
+    path: 'animal',
+    component: PageAnimauxComponent
+  },
+  {
+    path: 'detail-animal',
+    component: DetailAnimalComponent
+  },
+  {
+    path: 'ajout-animal',
+    component: AjoutAnimalComponent
+  },
+  {
+    path: 'tache',
+    component: PageTacheComponent
+  },
+  {
+    path: 'ajout-tache',
+    component: AjoutTacheComponent
+  },
+
 
 
 

@@ -1,0 +1,134 @@
+
+
+.droite {
+    width: 75%;
+    height: 832px;  
+    margin-top: -50%;
+    margin-left: 20%;  
+      }
+.container{
+display: flex;
+flex-direction: row;
+}
+input{
+   
+}
+.card {
+    width: 350px;
+    height: 220px;
+    flex-shrink: 0;
+    border: 1px solid #D9D9D9;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    border-radius: 10px;
+background: var(--white, #FFF);
+box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.04);
+}
+.carte{
+    margin-top: 50px;
+}
+.ico{
+    margin-right: 20px;
+}
+button{
+    width: 181px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 8px;
+background: var(--color1, #48436B);
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+color: var(--white, var(--white, #FFF));
+text-align: center;
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: 0.5px;
+}
+.contenu {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+i.bx-edit {
+    font-size: 30px;
+    margin-right: 20px;
+}
+.recherche{
+    margin-left: 53%;
+    display: flex;
+    flex-direction: row;
+    margin-top: -35px;
+    }
+    .info-tache {
+        display: flex;
+        align-items: center;
+    }
+    .check {
+        margin-left: 220px;
+        width: 20px;
+        height: 20px;
+        border-radius: 5px;
+        border: 1px solid #212842;
+    }
+.des {
+    margin-top: 40px;
+    margin-left: 20px;
+    color: var(--color-black, #24252C);
+font-family: Poppins;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+max-width: 300px;
+}
+label{
+    // margin-left: 20px;
+   
+}
+input{
+    display: flex;
+    width: 348px;
+    height: 50px;
+    padding: 5px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 4px;
+border: 1px solid #C9CDD4;
+background: var(--white, #FFF);
+color: var(--unnamed, #86909C);
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+margin-right: 5px;
+}
+
+.titre{
+    margin-top: 10px;
+}
+.ajout{
+    margin-top: -60px;  
+    cursor: pointer;
+    position: fixed;
+    margin-left: 40%;
+  }
+.btn{
+        
+    width: 300px;
+    height: 45px;
+    padding: 6px 0px 6px 8px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 10px;
+background: var(--color1, #48436B);
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+margin-left: 70%;
+margin-top: 50px;
+}

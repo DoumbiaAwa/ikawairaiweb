@@ -1,1 +1,56 @@
-<p>page-aliment works!</p>
+<app-principal></app-principal>
+
+<div class="container">
+    <div class="left">
+
+    </div>
+    <div class="droite">
+        <div class="ti">
+            <h1>Mes Aliments</h1>
+          </div>
+          <div class="recherche">
+          <input type="search" placeholder="Recherche..."/>
+          <button>Rechercher</button>
+        </div>
+        <!-- liste des aliments -->
+        <div class="contenu">
+            <div class="card">
+                <div style="margin-left: 6px;">
+                    <div class="title">
+                        <p>Nom aliment</p>
+                    </div>
+                    <div class="icon">
+                        <img src="../assets/lapin.png">
+                    </div>
+                    <div class="nbre">
+                        <p>Quantité</p>
+                        <h2>17 <strong>Kilo</strong></h2>
+                    </div>
+                </div>
+            </div>
+
+<!-- card1 -->
+
+<div class="card">
+    <div style="margin-left: 6px;">
+        <div class="title">
+            <p>Nom aliment</p>
+        </div>
+        <div class="icon">
+            <img src="../assets/lapin.png">
+        </div>
+        <div class="nbre">
+            <p>Quantité</p>
+            <h2>17 <strong>Kilo</strong></h2>
+        </div>
+    </div>
+</div>
+    <!-- le bouton ajout -->
+    <div class="ajout">
+        <button class="btn" (click)="openDialog()">
+          Ajouter un aliment
+          <img class="ico" src="./assets/ajout.png"style="float: right;">
+        </button>
+      </div>
+        </div>
+    </div>
