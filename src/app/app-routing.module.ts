@@ -36,6 +36,7 @@ import { PageNotifComponent } from './proprietaire/notification/page-notif/page-
 import { NotifPerteComponent } from './proprietaire/notification/notif-perte/notif-perte.component';
 import { BarreComponent } from './barre/barre.component';
 
+
 const routes: Routes = [
   {
     path: '',
@@ -54,9 +55,8 @@ const routes: Routes = [
     path: 'ajout', // URL pour la page 'accueil-awa'
     component: AjoutProprietaireComponent // Charge le composant AccueilAwaComponent
   },
-  {
-    path: 'profil', // URL pour la page 'accueil-awa'
-    component: ProfilEleveurComponent// Charge le composant AccueilAwaComponent
+  { path: 'profil/:id',
+   component: ProfilEleveurComponent
   },
   {
     path: 'defauld', // URL pour la page 'accueil-awa'

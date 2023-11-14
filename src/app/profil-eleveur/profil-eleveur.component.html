@@ -1,38 +1,10 @@
 <div class="container">
-    <!-- <div class="left">
-      <img  class="logo" src="../assets/logo.png">
-      <ul class="custom-list">
-          <div class="bar"    (click)="handleClick()" [ngClass]="{'active': isActive}">
-        <li class="custom-item" routerLink="../accueil-awa">
-          <i class="icon-person-outline"> 
-              <mat-icon>person</mat-icon>
-          </i>
-          <span>Liste des éleveurs</span>
 
-        </li>
-      </div>
-      <div class="bar">
-        <li class="custom-item" routerLink="../defauld">
-          <i class="icon-grid-outline">
-              <mat-icon>apps</mat-icon>
-
-
-          </i>
-          Catégories
-        </li>
-        </div>
-      </ul>
-    </div> -->
-  
     <app-barre></app-barre>
   <div class="droite">
-    <!-- bord -->
-    <!-- <div class="bord">
-      <p class="text">Tableau de bord</p>
-    </div> -->
-     <!-- parti info -->
+
     <div class="ti">
-      <h1>Youssouf Berté</h1>
+      <h1>{{ proprio?.nom }}</h1>
       <!-- les boutons -->
       <div class="action">
   
@@ -41,7 +13,7 @@
       </div>
   
       <div>
-        <Button  class="supprimer">Supprimer</Button>
+        <Button  class="supprimer"  (click)="deleteProprio()">Supprimer</Button>
       </div>
       </div>
     </div>
@@ -55,7 +27,7 @@
         <h3 class="coo">Code: </h3>
       </div>
       <div>
-        <h3 class="info">AZER% </h3>
+        <h3 class="info">{{ proprio?.code }}</h3>
       </div>
       </div>
   
@@ -64,7 +36,7 @@
         <h3 class="coo">Nomferme: </h3>
       </div>
       <div>
-        <h3 class="info">Grabali</h3>
+        <h3 class="info">{{ proprio?.ferme }}</h3>
       </div>
       </div>
   
@@ -73,7 +45,7 @@
         <h3 class="coo">Email: </h3>
       </div>
       <div>
-        <h3 class="info">Youssouf@gmail.com</h3>
+        <h3 class="info">{{ proprio?.email }}</h3>
       </div>
       </div>
       
@@ -82,7 +54,7 @@
         <h3 class="coo">Adresse: </h3>
       </div>
       <div>
-        <h3 class="info">Bamako</h3>
+        <h3 class="info">{{ proprio?.adresse }}</h3>
       </div>
       </div>
   
@@ -91,7 +63,7 @@
         <h3 class="coo">Tel: </h3>
       </div>
       <div>
-        <h3 class="info">+2230000</h3>
+        <h3 class="info">{{ proprio?.phone }}</h3>
       </div>
       </div>
     </div>

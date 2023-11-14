@@ -1,31 +1,9 @@
 <div class="container">
-    <!-- <div class="left">
-        <img class="logo" src="../assets/logo.png">
-        <ul class="custom-list">
-            <div class="bar" (click)="handleClick()" [ngClass]="{'active': isActive}">
-          <li class="custom-item">
-            <i class='bx bx-user'></i>
-            <span>Liste des éleveurs</span>
 
-          </li>
-        </div>
-        <div class="bar">
-          <li class="custom-item" routerLink="../defauld">
-            <i class='bx bxs-grid-alt'></i>
-            Catégories
-          </li>
-          </div>
-        </ul>
-    </div> -->
     <app-barre></app-barre>
     
   <div class="droite">
-    <!-- <div class="bord">
-      <p class="text">Tableau de bord</p>
-    </div> -->
-    <!-- barre de recherche -->
-    <!-- ET bouton d'ajout -->
-    
+
       <div class="ti">
         <h1>Liste des éléveurs</h1>
       </div>
@@ -52,7 +30,7 @@
     </div>
     <div class="nbre">
      <p>Nombres d'éléveurs</p>
-     <h2>170</h2>
+     <h2>{{ (proprietaires$ | async)?.length || 0 }}</h2>
     </div>
   
   </div>
@@ -71,16 +49,16 @@
           </tr>
       </thead>
       <tbody>
-          <tr>
-              <td ><input type="checkbox" class="check" ></td>
-              <td><img src="../assets/user.png"></td>
-              <td>Jane Smith</td>
-              <td>987-654-3210</td>
-              <td>jane.smith@example.com</td>
-              <td>456 Elm St, Town</td>
-              <td><button class="pr" routerLink="../profil">voir profil</button></td>
-          </tr>
-        
+        <tr *ngFor="let proprio of proprietaires$ | async">
+          <!-- Adjust the properties based on your data structure -->
+          <td><input type="checkbox" class="check"></td>
+          <td><img src="../assets/user.png"></td>
+          <td>{{ proprio.nom }}</td>
+          <td>{{ proprio.phone }}</td>
+          <td>{{ proprio.email }}</td>
+          <td>{{ proprio.adresse }}</td>
+          <td><button class="pr" [routerLink]="['../profil', proprio.id]">voir profil</button></td>
+        </tr>
       </tbody>
   </table>
   

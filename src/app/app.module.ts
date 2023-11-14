@@ -1,8 +1,22 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
+// import { AngularFireModule } from 'angularfire2';
+import { Auth } from '@angular/fire/auth';
+import { environment } from 'environments/environment';
+import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
+import {AngularFireModule} from '@angular/fire/compat';
+import {AngularFireAuthModule} from '@angular/fire/compat/auth';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { HttpClientModule } from "@angular/common/http";
+import { ReactiveFormsModule } from '@angular/forms';
+
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
 import { AppComponent } from './app.component';
+// @ts-ignore
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AccueilAwaComponent } from './accueil-awa/accueil-awa.component';
 import { DefauldCategorieComponent } from './defauld-categorie/defauld-categorie.component';
 import { ModifierEmployerComponent } from './modifier-employer/modifier-employer.component';
@@ -40,8 +54,9 @@ import { DetailEmployerComponent } from './proprietaire/employer/detail-employer
 import { ModifierComponent } from './proprietaire/employer/modifier/modifier.component';
 import { ModifierVenteComponent } from './proprietaire/vente/modifier-vente/modifier-vente.component';
 import { BarreComponent } from './barre/barre.component';
-// import { TabsModule } from './tabs/tabs.module';
-// import { TabsComponent } from './tabs/tabs.component';
+// import { AngularFireAuth } from '@angular/fire/auth';
+import { Router } from '@angular/router';
+// import {Proprio} from './model/proprio';
 
 @NgModule({
   declarations: [
@@ -62,7 +77,7 @@ import { BarreComponent } from './barre/barre.component';
     DetailEmployerComponent,
     PageVaccinComponent,
     AjoutVaccinComponent,
-    DetailVaccinComponent,
+    // DetailVaccinComponent,
     ModifierComponent,
     ChoixRaceComponent,
     PageAlimentComponent,
@@ -90,7 +105,15 @@ import { BarreComponent } from './barre/barre.component';
     BrowserAnimationsModule,
     MatDialogModule,
     MatIconModule,
-    // TabsModule,
+    AngularFireAuthModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+        provideFirestore(() => getFirestore()),
+    provideAuth(() => getAuth()),
+    ReactiveFormsModule
+    
+    
+
+
 
   ],
   providers: [],

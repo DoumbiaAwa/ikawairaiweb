@@ -14,7 +14,8 @@ export class DefauldCategorieComponent {
   openDialog(): void {
     const dialogRef = this.dialog.open(AjoutCategorieComponent, {
       width: '480px',
-      height: '79%', // Définissez la largeur de la boîte de dialogue
+      height: '79%',
+      disableClose: true 
     });
   
     dialogRef.afterClosed().subscribe(result => {

@@ -1,16 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ModifierEmployerComponent } from '../modifier-employer/modifier-employer.component';
 import { MatDialog } from '@angular/material/dialog';
 import { AjoutCategorieComponent } from '../ajout-categorie/ajout-categorie.component';
 import { ModifierCategorieComponent } from '../modifier-categorie/modifier-categorie.component';
+import { ActivatedRoute } from '@angular/router';
+import { ProprioService } from '../service/proprio.service';
+import { Proprio } from '../model/proprio';
+import { Inject } from '@angular/core';
+import { map } from 'rxjs/operators';
+import { Observable } from "rxjs";
 @Component({
   selector: 'app-profil-eleveur',
   templateUrl: './profil-eleveur.component.html',
   styleUrls: ['./profil-eleveur.component.scss']
 })
-export class ProfilEleveurComponent {
-
-  constructor(private dialog: MatDialog) {}
+export class ProfilEleveurComponent implements OnInit {
+  proprioId: string | null = null;
+  proprio: Proprio | undefined;
+  constructor(private dialog: MatDialog, private proprioService: ProprioService,private route: ActivatedRoute) {
+    
+  }
   // ajouter categogorie
   opencat(): void{
     const dialogRef = this.dialog.open(AjoutCategorieComponent, {
@@ -42,9 +51,41 @@ export class ProfilEleveurComponent {
     });
   }
   
-  isActive = true;
-  handleClick() {
-    this.isActive = !this.isActive;
+  ngOnInit(): void {
+    this.route.params.subscribe(params => {
+      this.proprioId = params['id'];
+      if (this.proprioId) {
+        this.proprioService.getProprioById(this.proprioId).subscribe(proprio => {
+          this.proprio = proprio;
+        });
+      }
+    });
+ }
+
+  loadProprio() {
+    if (this.proprioId) {
+      this.proprioService.getProprioById(this.proprioId)
+        .subscribe(proprio => {
+          this.proprio = proprio;
+        });
+    }
+  }
+
+  deleteProprio(): void {
+    if (this.proprioId) {
+      this.proprioService.deleteProprio(this.proprioId)
+        .
+     
+  then(() => {
+          console.log('Proprio deleted successfully');
+          alert('Proprio deleted successfully');  // Show alert on successful deletion
+          // Optionally: navigate to another page after deletion
+        })
+        .catch(error => {
+          console.error('Error deleting proprio:', error);
+          alert('Error deleting proprio');  // Show alert on error
+        });
+    }
   }
 
 }

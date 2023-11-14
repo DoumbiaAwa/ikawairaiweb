@@ -1,37 +1,39 @@
+<!-- nouvel-eleveur.component.html -->
+
 <div class="container">
-    <h1>Nouvel Eleveur</h1>
-    <p>Code: XS75</p>
-    <form>
-      <div class="form-group">
-        <label for="nomComplet">Prenom & Nom</label>
-        <input type="text" id="nomComplet" name="nomComplet" placeholder="Nom complet" class="iptform">
+  <h1>Nouvel Eleveur</h1>
+  <p>Code: {{ codeGenere }}</p>
+  <form [formGroup]="proprioForm" >
+    <div class="form-group">
+      <label for="nomComplet">Prenom & Nom</label>
+      <input type="text" id="nomComplet" name="nom" formControlName="nom" placeholder="Nom complet" class="iptform">
+    </div>
+    <div class="form-group">
+      <label for="nomFerme">Nom de la ferme</label>
+      <input type="text" id="nomFerme" name="ferme" formControlName="ferme" placeholder="Ferme" class="iptform">
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" formControlName="email" placeholder="example@gmail.com" class="iptform">
+    </div>
+    <div class="adress">
+      <div>
+        <label for="telephone">Téléphone</label>
+        <input type="tel" id="telephone" name="phone" formControlName="phone" placeholder="Numéro" class="ipt">
       </div>
-      <div class="form-group">
-        <label for="nomFerme">Nom de la ferme</label>
-        <input type="text" id="nomFerme" name="nomFerme" placeholder="Ferme" class="iptform">
+      <div style="margin-left: 20px;">
+        <label for="adresse">Adresse</label>
+        <input type="text" id="adresse" name="adresse" formControlName="adresse" placeholder="Votre adresse" class="ipt">
       </div>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="example@gmail.com"class="iptform">
+    </div>
+    <div class="adress">
+      <div>
+        <label for="motDePasseGenere">Mot de passe</label>
+        <input type="text" id="motDePasseGenere" name="password" formControlName="password" placeholder="Mot de passe ou généré" class="ipt">
       </div>
-      <div class="adress">
-        <div>
-          <label for="telephone">Téléphone</label>
-          <input type="tel" id="telephone" name="telephone" placeholder="Numéro"class="ipt">
-        </div>
-        <div style="margin-left: 20px;">
-          <label for="adresse">Adresse</label>
-          <input type="text" id="adresse" name="adresse" placeholder="Votre adresse" class="ipt">
-        </div>
-      </div>
-      <div class="adress">
-        <div>
-          <label for="motDePasseGenere">Mot de passe</label>
-          <input type="text" id="motDePasseGenere" name="motDePasse" placeholder="Mot de passe ou généré"class="ipt">
-        </div>
-        <button class="btn">Générer</button>
-      </div>
-      <button>Créer un compte</button>
-    </form>
-  </div>
-  
+      <button class="btn">Générer</button>
+    </div>
+    <button type="submit" (click)="ajouterProprio()">Créer un compte</button>
+    <button type="submit" (click)=" annuler()" style="background-color: rgb(238, 42, 42);">Annuler</button>
+  </form>
+</div>
