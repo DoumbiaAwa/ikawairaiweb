@@ -2,32 +2,31 @@
   <div class="conteneur">
      <h1>Ajouter une Catégorie</h1>
  
-     <form>
+     <form [formGroup]="categorieForm">
        <div style="margin-left: 47%" class="ipt">
-         <input type="file" placeholder="Ajouter une photo">
+         <input type="file" placeholder="Ajouter une photo" formControlName="photocat" multiple="multiple" accept="image/*" (change)="ImageChange($event)" (change)="onFileChange($event)" required>
        </div>
        <div class="form-group">
          <label for="nomComplet">Nom</label>
-         <input type="text" id="nomcate" name="nomcate" placeholder="Nom de la catégorie" class="iptform">
+         <input type="text" id="nomcate" name="nomcate" formControlName="nom" placeholder="Nom de la catégorie" class="iptform" required>
        </div>
-       <div class="adress">
-         <div *ngFor="let race of races; let i = index">
-      
+
+       <div *ngFor="let race of races; let i = index"  class="adress">
+              <div>
              <label for="race">Race</label>
-             <input type="text" id="race{{ i }}" name="race{{ i }}" placeholder="race" class="iptforme">
-             <br>
-           </div>
+             <input type="text" id="race{{ i }}" name="race{{ i }}" formControlName="race" placeholder="race" class="iptforme" required>
+            </div>
            <div class="toff">
-             <input type="file" id="toff" name="toff" class="ipt">
+             <input type="file" id="toff" name="toff" class="ipt" formControlName="photorace" multiple="multiple" accept="image/*" (change)="ImageChange($event)" (change)="onFileChange($event)"required>
+            </div>
+          </div>
           
-         </div>
-         
-       </div>
+       
        <div>
-        <button class="ipt" (click)="ajouterRace()">Ajouter</button>
+        <button class="ipt" (click)="ajouterRace($event)">Ajouter</button>
       </div>
        <div class="action">
-         <button class="btn">Enregistrer</button>
+         <button class="btn" (click)=" ajouterCategory()" disabled="!categorieForm">Enregistrer</button>
          <button class="annule" (click)="annuler()">Annuler</button>
        </div>
      </form>

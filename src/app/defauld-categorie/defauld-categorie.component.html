@@ -15,20 +15,22 @@
       </div>
 
   <!-- card catégorie -->
-  <div class="card">
+  <div class="carte">
+  <div class="card" *ngFor="let category of categorys$ | async">
     <img src="../assets/modifier.png" class="md" (click)="OpenModif()">
     <div class="title">
-      <p>Poulet</p>
+      <p>{{ category.nom }}</p>
     </div>
     <div class="icon">
-    <img src="./assets/poulet.png">
+      <!-- imageici -->
+    <img  [src]="category.photocat">
     </div>
     <div class="nbre">
-     <p>Nombres de race : 5</p>
-     <button class="butn">Supprimer</button>
+     <p>Nombres de race : {{ numberOfRaces }}</p>
+     <button class="butn" (click)="category.id && supprimer(category.id)">Supprimer</button>
     </div>
   </div>
-  
+</div>
   
   
   </div>
