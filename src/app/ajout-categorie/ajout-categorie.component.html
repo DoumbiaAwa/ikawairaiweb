@@ -4,7 +4,7 @@
  
      <form [formGroup]="categorieForm">
        <div style="margin-left: 47%" class="ipt">
-         <input type="file" placeholder="Ajouter une photo" formControlName="photocat" multiple="multiple" accept="image/*" (change)="ImageChange($event)" (change)="onFileChange($event)" required>
+         <input type="file" placeholder="Ajouter une photo" formControlName="photocat">
        </div>
        <div class="form-group">
          <label for="nomComplet">Nom</label>
@@ -17,7 +17,7 @@
              <input type="text" id="race{{ i }}" name="race{{ i }}" formControlName="race" placeholder="race" class="iptforme" required>
             </div>
            <div class="toff">
-             <input type="file" id="toff" name="toff" class="ipt" formControlName="photorace" multiple="multiple" accept="image/*" (change)="ImageChange($event)" (change)="onFileChange($event)"required>
+             <input type="file" id="toff" name="toff" class="ipt" formControlName="photorace">
             </div>
           </div>
           
@@ -26,7 +26,7 @@
         <button class="ipt" (click)="ajouterRace($event)">Ajouter</button>
       </div>
        <div class="action">
-         <button class="btn" (click)=" ajouterCategory()" disabled="!categorieForm">Enregistrer</button>
+         <button class="btn" (click)=" ajouterCategory()">Enregistrer</button>
          <button class="annule" (click)="annuler()">Annuler</button>
        </div>
      </form>

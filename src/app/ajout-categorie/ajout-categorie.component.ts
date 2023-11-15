@@ -53,22 +53,5 @@ export class AjoutCategorieComponent {
         // Gérez l'erreur comme vous le souhaitez (par exemple, affichez un message à l'utilisateur)
       });
   }
-  ImageChange(event: any) {
-    this.categorieForm = event.target.files[0];
-    // console.log(this.image);
-  }
-  //prévisualisation de l'image
-  onFileChange(event: any) {
-    const reader = new FileReader();
-    if (event.target.files && event.target.files.length) {
-      const [file] = event.target.files;
-      reader.readAsDataURL(file);
-      reader.onload = () => {
-        this.file= reader.result as string;
-        this.categorieForm.patchValue({
-          fileSource: reader.result
-        });
-      };
-    }
-  }
+  
 }

@@ -1,13 +1,18 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
 import { map } from 'rxjs/operators';
-import { Observable } from "rxjs";
+import { Observable, Subject } from 'rxjs';
 import { Category } from '../model/category';
+import { BehaviorSubject } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
 export class CategoryService {
   private categoryCollection: AngularFirestoreCollection<any>;
+  private selectedCategorySubject = new Subject<Category | null>();
+  private selectedCategoryListSubject = new Subject<Category[]>();
+  // private selectedCategoryListSubject = new BehaviorSubject<Category[]>([]);
+  selectedCategoryList$: Observable<Category[]> = this.selectedCategoryListSubject.asObservable();
 
   constructor(private firestore: AngularFirestore) { 
     this.categoryCollection = this.firestore.collection<any>('category');
@@ -46,4 +51,24 @@ deleteCategory(id: string): Promise<void> {
       throw error;  // Propagez l'erreur pour la gérer dans le composant
     });
 }
+
+private selectedCategory: Category | undefined;
+
+  // setSelectedCategory(category: Category): void {
+  //   this.selectedCategory = category;
+  // }
+
+  getSelectedCategory(): Category | undefined {
+    return this.selectedCategory;
+  }
+  setSelectedCategory(category: Category | null): any {
+    this.selectedCategorySubject.next(category);
+  }
+
+  setSelectedCategoryList(categories: Category[]): void {
+    this.selectedCategoryListSubject.next(categories);
+  }
+  getSelectedCategoryList(): Observable<Category[]> {
+    return this.selectedCategoryList$;
+  }
 }

@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="choi" *ngFor="let category of categories">
+      <div>
+        <input type="checkbox" class="check" (change)="selectedCategory(category)">
+      </div>
+      <div>
+        <h1>{{ category.nom }}</h1>
+      </div>
+    </div>
+    <div class="action">
+      <button class="btn"  (click)="enregistrer()" [disabled]="selectedCategories.length === 0">Enregistre</button>
+      <button class="annule" (click)="annuler()">Annuler</button>
+    </div>
+  </div>
+  

@@ -5,10 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { Auth } from '@angular/fire/auth';
 import { environment } from 'environments/environment';
 import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
-import {AngularFireModule} from '@angular/fire/compat';
-import {AngularFireAuthModule} from '@angular/fire/compat/auth';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
-import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideAuth, getAuth } from '@angular/fire/auth';
 import { HttpClientModule } from "@angular/common/http";
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -56,6 +56,7 @@ import { ModifierVenteComponent } from './proprietaire/vente/modifier-vente/modi
 import { BarreComponent } from './barre/barre.component';
 // import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
+import { SelectComponent } from './select/select.component';
 // import {Proprio} from './model/proprio';
 
 @NgModule({
@@ -96,6 +97,7 @@ import { Router } from '@angular/router';
     NotifPerteComponent,
     ModifierVenteComponent,
     BarreComponent,
+    SelectComponent,
     //TabsComponent,
 
   ],
@@ -107,11 +109,11 @@ import { Router } from '@angular/router';
     MatIconModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-        provideFirestore(() => getFirestore()),
+    provideFirestore(() => getFirestore()),
     provideAuth(() => getAuth()),
     ReactiveFormsModule
-    
-    
+
+
 
 
 

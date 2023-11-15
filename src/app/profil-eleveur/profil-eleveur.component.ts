@@ -9,6 +9,9 @@ import { Proprio } from '../model/proprio';
 import { Inject } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { Observable } from "rxjs";
+import { SelectComponent } from '../select/select.component';
+import { CategoryService } from '../service/category.service';
+import { Category } from '../model/category';
 @Component({
   selector: 'app-profil-eleveur',
   templateUrl: './profil-eleveur.component.html',
@@ -17,14 +20,18 @@ import { Observable } from "rxjs";
 export class ProfilEleveurComponent implements OnInit {
   proprioId: string | null = null;
   proprio: Proprio | undefined;
-  constructor(private dialog: MatDialog, private proprioService: ProprioService,private route: ActivatedRoute) {
-    
+  selectedCategories: Category[] = [];
+  
+  constructor(private dialog: MatDialog, private proprioService: ProprioService, private route: ActivatedRoute
+    ,private categoryService:CategoryService) {
+
   }
   // ajouter categogorie
-  opencat(): void{
-    const dialogRef = this.dialog.open(AjoutCategorieComponent, {
-      width: '480px',
-      height: '79%',
+  opencat(): void {
+    const dialogRef = this.dialog.open(SelectComponent, {
+      width: '400px',
+      height: '90%',
+      disableClose:true
     });
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Résultat de la boîte de dialogue : ${result}`);
@@ -36,21 +43,21 @@ export class ProfilEleveurComponent implements OnInit {
       width: '528px',
       height: '96', // Définissez la largeur de la boîte de dialogue
     });
-  
+
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Résultat de la boîte de dialogue : ${result}`);
     });
   }
 
   //modifier categorie
-  OpenModif(): void{
-    const dialogRef=this.dialog.open(ModifierCategorieComponent,{
+  OpenModif(): void {
+    const dialogRef = this.dialog.open(ModifierCategorieComponent, {
       width: '480px',
-      height: '79%', 
+      height: '79%',
 
     });
   }
-  
+
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       this.proprioId = params['id'];
@@ -60,7 +67,11 @@ export class ProfilEleveurComponent implements OnInit {
         });
       }
     });
- }
+    this.categoryService.setSelectedCategoryList([]);
+    this.categoryService.getSelectedCategoryList().subscribe(selectedCategories => {
+      this.selectedCategories = selectedCategories;
+    });
+  }
 
   loadProprio() {
     if (this.proprioId) {
@@ -75,8 +86,8 @@ export class ProfilEleveurComponent implements OnInit {
     if (this.proprioId) {
       this.proprioService.deleteProprio(this.proprioId)
         .
-     
-  then(() => {
+
+        then(() => {
           console.log('Proprio deleted successfully');
           alert('Proprio deleted successfully');  // Show alert on successful deletion
           // Optionally: navigate to another page after deletion
@@ -87,5 +98,6 @@ export class ProfilEleveurComponent implements OnInit {
         });
     }
   }
+
 
 }

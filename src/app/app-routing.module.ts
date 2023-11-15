@@ -35,6 +35,7 @@ import { ModifierVenteComponent } from './proprietaire/vente/modifier-vente/modi
 import { PageNotifComponent } from './proprietaire/notification/page-notif/page-notif.component';
 import { NotifPerteComponent } from './proprietaire/notification/notif-perte/notif-perte.component';
 import { BarreComponent } from './barre/barre.component';
+import { SelectComponent } from './select/select.component';
 
 
 const routes: Routes = [
@@ -55,8 +56,9 @@ const routes: Routes = [
     path: 'ajout', // URL pour la page 'accueil-awa'
     component: AjoutProprietaireComponent // Charge le composant AccueilAwaComponent
   },
-  { path: 'profil/:id',
-   component: ProfilEleveurComponent
+  {
+    path: 'profil/:id',
+    component: ProfilEleveurComponent
   },
   {
     path: 'defauld', // URL pour la page 'accueil-awa'
@@ -177,18 +179,22 @@ const routes: Routes = [
   },
   {
     path: 'perte',
-    component:NotifPerteComponent 
+    component: NotifPerteComponent
   },
   {
     path: 'barre',
-    component:BarreComponent
+    component: BarreComponent
+  },
+  {
+    path: 'select',
+    component: SelectComponent
+
   },
 
 
 
 
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

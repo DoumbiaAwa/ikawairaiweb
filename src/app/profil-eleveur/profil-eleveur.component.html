@@ -110,10 +110,11 @@
     </div>
 
 <!-- card catégorie -->
-<div class="card">
-  <img src="../assets/modifier.png" class="md" (click)="OpenModif()">
+<div class="carte">
+<div class="card"*ngIf="selectedCategories.length > 0">
+  <!-- <img src="../assets/modifier.png" class="md" (click)="OpenModif()"> -->
   <div class="title">
-    <p>Poulet</p>
+    <p>{{ selectedCategories[0].nom }}</p>
   </div>
   <div class="icon">
   <img src="./assets/poulet.png">
@@ -122,6 +123,7 @@
    <p>Nombres de race : 5</p>
    <button class="butn">Supprimer</button>
   </div>
+</div>
 </div>
 
 

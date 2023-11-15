@@ -1,0 +1,87 @@
+.container{
+    // margin-left: 30%;
+    justify-content: center; 
+    align-items: center;  
+    // margin-top: 90px;
+    border-radius: 10px;
+    background: var(--white, #FFF);
+    box-shadow: 0px 4px 4px 0px rgba(33, 40, 66, 0.20);
+    width: 400px;
+    height: 100%;
+    
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 2px solid var(--gray-blue-grey-blue-97, #F5F6F7);
+        background: var(--white, #FFF);
+        margin-top: 30px;
+    }
+    
+    thead {
+        background: var(--white, #FFF);
+        min-height: 60px;
+    }
+    
+    th {
+        padding: 10px 15px;
+        text-align: left;
+        border-bottom: 2px solid var(--gray-blue-grey-blue-97, #F5F6F7);
+        color: var(--gray-blue-grey-blue-70, #7D8FB3);
+    font-feature-settings: 'clig' off, 'liga' off;
+    
+    /* Bold/Bold 12 */
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px; /* 166.667% */
+    }
+    .check {
+        display: flex;
+        width: 20px;
+        height: 20px;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        border: 2px solid var(--gray-blue-grey-blue-96, #F2F3F5);
+        background: var(--white-white, #FFF);
+        box-shadow: 0px 2px 10px 0px rgba(38, 51, 77, 0.03);
+    }
+    .btn{
+        display: flex;
+        width: 200px;
+        padding: 14.351px 0px 14.649px 0px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+    background: #f5913f;
+    box-shadow: 0px 1px 2px 0px rgb(255, 245, 245);
+    color: #FFF;
+    margin-top: 7px;
+    cursor: pointer;
+    }
+    .annule{
+        display: flex;
+        width: 200px;
+        padding: 14.351px 0px 14.649px 0px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+    background: #F53F3F;
+    box-shadow: 0px 1px 2px 0px rgb(255, 245, 245);
+    color: #FFF;
+    margin-top: 7px;
+    cursor: pointer;
+    
+    }
+    .action{
+        margin-top: 80%;
+        margin-left: 20%;
+        
+        }
+.choi{
+display: flex;
+flex-direction: row;
+}
