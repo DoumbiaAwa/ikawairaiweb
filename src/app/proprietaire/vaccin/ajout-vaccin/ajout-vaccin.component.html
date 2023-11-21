@@ -3,28 +3,28 @@
     <img src="../assets/piqure.png" alt="" class="ico">
     <h1>Ajouter un vaccin</h1>
     </div>
-    <form>
+    <form [formGroup]="vaccinForm">
         <div class="form-group">
           <label for="nomComplet">Nom</label>
-          <input type="text" id="nom" name="nom" placeholder="Nom du vaccin" class="iptform">
+          <input type="text" id="nom" name="nom" placeholder="Nom du vaccin" class="iptform" formControlName="nom">
         </div>
         <div class="form-group">
           <label for="nomFerme">Date de vaccination</label>
-          <input type="text" id="date" name="date" placeholder="MM/JJ/AA" class="iptform">
+          <input type="text" id="date" name="date" placeholder="MM/JJ/AA" class="iptform" formControlName="date">
         </div>
         <div class="form-group">
             <label for="prix">Prix</label>
-            <input type="text" id="prix" name="prix" placeholder="prix" class="iptform">
+            <input type="text" id="prix" name="prix" placeholder="prix" class="iptform" formControlName="prix">
           </div>
          
           <div class="ajout">
-            <button class="btn" (click)="openDialog($event)">Choix races<img src="./assets/ajout.png"></button>
+            <button class="btn" (click)="openDialog($event)">Choix Catégories<img src="./assets/ajout.png"></button>
           </div>
           
           <div class="action">
-            <button class="enregistrer">Enregistrer</button>
+            <button class="enregistrer" (click)="addVaccin()">Enregistrer</button>
            
-              <button class="annule">Annuler</button>
+              <button class="annule" (click)="annuler()">Annuler</button>
              </div>
     </form>
     </div>

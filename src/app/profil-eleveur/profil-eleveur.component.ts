@@ -34,7 +34,7 @@ export class ProfilEleveurComponent implements OnInit {
       disableClose:true
     });
     dialogRef.afterClosed().subscribe(result => {
-      console.log(`Résultat de la boîte de dialogue : ${result}`);
+      // console.log(`Résultat de la boîte de dialogue : ${result}`);
     });
   }
   //modifier employer
@@ -45,7 +45,9 @@ export class ProfilEleveurComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log(`Résultat de la boîte de dialogue : ${result}`);
+      if (result === 'enregistrer') {
+        console.log('Catégories enregistrées dans le ProfilEleveurComponent:', this.selectedCategories);
+      }
     });
   }
 
@@ -67,11 +69,14 @@ export class ProfilEleveurComponent implements OnInit {
         });
       }
     });
-    this.categoryService.setSelectedCategoryList([]);
+  
     this.categoryService.getSelectedCategoryList().subscribe(selectedCategories => {
       this.selectedCategories = selectedCategories;
+      console.log('Catégories sélectionnées dans ProfilEleveurComponent :', selectedCategories);
     });
   }
+  
+  
 
   loadProprio() {
     if (this.proprioId) {

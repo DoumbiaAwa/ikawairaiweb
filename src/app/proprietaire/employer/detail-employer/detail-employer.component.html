@@ -3,11 +3,11 @@
         <img src="../assets/user.png">
     </div>
     <div class="info">
-     <h2>Awa Doumbia</h2>
-     <p>+223 74764880</p>
-     <P>Kalaban Coura ACI</P>
+     <h2>{{ employer.nom }}</h2>
+     <p>{{ employer.numero }}</p>
+     <P>{{ employer.adresse }}</P>
      <div class="action">
-        <button class="supp">Supprimer</button>
+        <button class="supp" (click)="deleteEmployer()">Supprimer</button>
         <button class="modif" (click)="openDialog()">Modifier</button>
        </div>
     </div>

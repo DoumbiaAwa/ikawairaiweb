@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
+import { CommonModule } from '@angular/common';
 // import { AngularFireModule } from 'angularfire2';
 import { Auth } from '@angular/fire/auth';
 import { environment } from 'environments/environment';
@@ -11,6 +12,7 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 import { HttpClientModule } from "@angular/common/http";
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
@@ -57,6 +59,7 @@ import { BarreComponent } from './barre/barre.component';
 // import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 import { SelectComponent } from './select/select.component';
+import { DetailAlimentComponent } from './aliment/detail-aliment/detail-aliment.component';
 // import {Proprio} from './model/proprio';
 
 @NgModule({
@@ -98,6 +101,10 @@ import { SelectComponent } from './select/select.component';
     ModifierVenteComponent,
     BarreComponent,
     SelectComponent,
+    DetailVaccinComponent,
+    DetailAlimentComponent,
+    AjoutVaccinComponent,
+    ChoixRaceComponent
     //TabsComponent,
 
   ],
@@ -111,7 +118,10 @@ import { SelectComponent } from './select/select.component';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     provideFirestore(() => getFirestore()),
     provideAuth(() => getAuth()),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule,
+    CommonModule,
 
 
 

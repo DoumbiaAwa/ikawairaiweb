@@ -29,13 +29,13 @@
           </tr>
       </thead>
       <tbody>
-          <tr>
+          <tr  *ngFor="let vaccin of vaccin$ | async; let i = index">
               <td ><input type="checkbox" class="check" ></td>
               <td><img src="../assets/piqure.png"></td>
-              <td>prevention</td>
-              <td>23/04/2023</td>
-              <td>1000cfa</td>
-              <td><button class="pr" (click)="afficherDetail()">voir profil</button></td>
+              <td>{{ vaccin.nom }}</td>
+              <td>{{vaccin.date}}</td>
+              <td>{{vaccin.prix}}</td>
+             <td><button class="pr" (click)="afficherDetail(vaccin.id)">voir</button></td> 
           </tr>
         
       </tbody>

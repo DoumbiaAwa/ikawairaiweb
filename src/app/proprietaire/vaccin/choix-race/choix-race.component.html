@@ -6,53 +6,15 @@
     </div>
     
     <div class="carte">
-      <div class="card">
+
+      <div class="card"   *ngFor="let category of categories">
        <div class="contenu">
-      <div><input type="checkbox"></div>
+      <div><input type="checkbox" (change)="selectedCategory(category)"></div>
       <div><img src="../assets/piqure.png"></div>
-      <div>chair</div>
+      <div>{{ category.nom }} </div>
       </div>
     </div>
 
-    <div class="card">
-        <div class="contenu">
-       <div><input type="checkbox"></div>
-       <div><img src="../assets/piqure.png"></div>
-       <div>chair</div>
-       </div>
-     </div>
-
-     <div class="card">
-        <div class="contenu">
-       <div><input type="checkbox"></div>
-       <div><img src="../assets/piqure.png"></div>
-       <div>chair</div>
-       </div>
-     </div>
-
-     <div class="card">
-        <div class="contenu">
-       <div><input type="checkbox"></div>
-       <div><img src="../assets/piqure.png"></div>
-       <div>chair</div>
-       </div>
-     </div>
-
-     <div class="card">
-        <div class="contenu">
-       <div><input type="checkbox"></div>
-       <div><img src="../assets/piqure.png"></div>
-       <div>chair</div>
-       </div>
-     </div>
-
-     <div class="card">
-        <div class="contenu">
-       <div><input type="checkbox"></div>
-       <div><img src="../assets/piqure.png"></div>
-       <div>chair</div>
-       </div>
-     </div>
     </div>
-<button class="btn">Valider</button>
+   <button class="btn" (click)="enregistrer()" [disabled]="selectedCategories.length === 0">Valider</button>
 </div>

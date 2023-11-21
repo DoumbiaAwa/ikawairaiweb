@@ -11,7 +11,7 @@ export class PageAlimentComponent {
   openDialog(): void {
     const dialogRef = this.dialog.open(AjoutAlimentComponent, {
       width: '555px',
-      height: '625px',
+      height: '650px',
       disableClose: true,
     });
   }

@@ -61,6 +61,14 @@ const routes: Routes = [
     component: ProfilEleveurComponent
   },
   {
+    path: 'detail/:id',
+    component: DetailEmployerComponent
+  },
+  {
+    path: 'vaccin/:id',
+    component: DetailVaccinComponent
+  },
+  {
     path: 'defauld', // URL pour la page 'accueil-awa'
     component: DefauldCategorieComponent// Charge le composant AccueilAwaComponent
   },

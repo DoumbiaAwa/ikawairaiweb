@@ -111,10 +111,10 @@
 
 <!-- card catégorie -->
 <div class="carte">
-<div class="card"*ngIf="selectedCategories.length > 0">
+<div class="card" *ngFor="let category of selectedCategories">
   <!-- <img src="../assets/modifier.png" class="md" (click)="OpenModif()"> -->
   <div class="title">
-    <p>{{ selectedCategories[0].nom }}</p>
+    <p> {{ category.nom }}</p>
   </div>
   <div class="icon">
   <img src="./assets/poulet.png">

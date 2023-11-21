@@ -1,25 +1,54 @@
 <div class="conteneur">
-    <img src="../assets/cloose.png" class="fermer">
-    <div class="image">
-    <img src="../assets/piqure.png" alt="">
+    <div class="titre">
+    <img src="../assets/piqure.png" class="ig">
     <h1>Détail Vaccin</h1>
     </div>
-    <form>
-        <div class="form-group">
-          <label for="nomComplet">Nom</label>
-          <input type="text" id="nomComplet" name="nomComplet" placeholder="Nom complet" class="iptform">
-        </div>
-        <div class="form-group">
-          <label for="nomFerme">Date de vaccination</label>
-          <input type="text" id="adresse" name="adresse" placeholder="son adresse" class="iptform">
-        </div>
-        <div class="form-group">
-            <label for="nomFerme">Prix</label>
-            <input type="text" id="num" name="numero" placeholder="Numero" class="iptform">
-          </div>
-          <div class="action">
-            <button class="btn">Modifier</button>
-              <button class="annule">Annuler</button>
-             </div>
-    </form>
+   
+  <div class="info" >
+   <h2></h2>
+   <p>Nom: {{vaccin.nom}}</p>
+   <p>Date: {{vaccin.date}} </p>
+   <p>Prix: {{vaccin.prix}}</p>
+  </div>
+   <h2>Catégories concerner</h2>
+  <ul>
+    <li *ngFor="let category of vaccin.categories">{{ category.nom }}</li>
+  </ul>
+   <div class="action">
+      <button class="supp" >Supprimer</button>
+     </div>
+  
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <form>
+      <div class="form-group">
+        <label for="nomComplet">Nom</label>
+        <input type="text" id="nomComplet" name="nomComplet" placeholder="Nom complet" class="iptform">
+      </div>
+      <div class="form-group">
+        <label for="nomFerme">Date de vaccination</label>
+        <input type="text" id="adresse" name="adresse" placeholder="son adresse" class="iptform">
+      </div>
+      <div class="form-group">
+          <label for="nomFerme">Prix</label>
+          <input type="text" id="num" name="numero" placeholder="Numero" class="iptform">
+        </div>
+        <div class="action">
+          <button class="btn">Modifier</button>
+            <button class="annule">Annuler</button>
+           </div>
+  </form> -->

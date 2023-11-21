@@ -3,28 +3,31 @@
 <img src="../assets/user.png" alt="">
 <h1>Ajouter un employer</h1>
 </div>
-<form>
-    <div class="form-group">
-      <label for="nomComplet">Prenom et Nom</label>
-      <input type="text" id="nomComplet" name="nomComplet" placeholder="Nom complet" class="iptform">
-    </div>
-    <div class="form-group">
-      <label for="nomFerme">Adresse</label>
-      <input type="text" id="adresse" name="adresse" placeholder="son adresse" class="iptform">
-    </div>
-    <div class="form-group">
-        <label for="nomFerme">Numero</label>
-        <input type="text" id="num" name="numero" placeholder="Numero" class="iptform">
-      </div>
-      <div class="form-group">
-        <label for="nomFerme">Mot de passe</label>
-        <input type="text" id="mdp" name="mdp" placeholder="motDePasse" class="iptform">
-      </div>
-      
-      <div class="action">
-        <button class="btn">Enregistrer</button>
-       
-          <button class="annule">Annuler</button>
-         </div>
+<form [formGroup]="employerForm">
+  <!-- Form fields with formControlName -->
+  <div class="form-group">
+    <label for="nomComplet">Prenom et Nom</label>
+    <input type="text" id="nomComplet" formControlName="nom" placeholder="Nom complet" class="iptform">
+  </div>
+
+  <div class="form-group">
+    <label for="adresse">Adresse</label>
+    <input type="text" id="adresse" formControlName="adresse" placeholder="Son adresse" class="iptform">
+  </div>
+
+  <div class="form-group">
+    <label for="numero">Numero</label>
+    <input type="text" id="numero" formControlName="numero" placeholder="Numero" class="iptform">
+  </div>
+
+  <div class="form-group">
+    <label for="motDePasse">Mot de passe</label>
+    <input type="password" id="password" formControlName="password" placeholder="Mot de passe" class="iptform">
+  </div>
+
+  <div class="action">
+    <button class="btn" (click)="addEmployer()">Enregistrer</button>
+    <button class="annule" (click)="annuler()">Annuler</button>
+  </div>
 </form>
 </div>

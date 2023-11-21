@@ -1,20 +1,4 @@
-.iptform{
-    display: flex;
-    width: 397.824px;
-    height: 20px;
-    padding: 11.865px 16.611px 11.865px 23.73px;
-    align-items: center;
-    gap: 7.91px;
-    flex-shrink: 0;
-    border-radius: 5px;
-border: 0.791px solid #D2CECE;
-background: var(--white, #FFF);   
-max-width: 400px;
-margin-bottom: 10px;
-}
-.form{
-  
-}
+
 .conteneur{
     margin-left: 10px;
     height: 200px;
@@ -27,39 +11,17 @@ background: var(--white, #FFF);
  margin-top: 20px;
     
 }
-.image{
+.titre{
     margin-left: 150PX;
 }
-img{
+.ig{
 margin-left: 70px;
 }
 .fermer{
     margin-left: 100%; 
     margin-top: -5px;  
    }
-.btn{
 
-    width: 397.824px;
-   height: 40px;
-    border-radius: 10px;
-background: #ffffff;
-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-color: #02034f;
-margin-right: 5px;
-
-}
-.annule{
-    
-   
-    width: 397.824px;
-    height: 40px;
-    border-radius: 10px;
-background: #F53F3F;
-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-color: #FFF;
-
-
-}
 .action{
     margin-top: 20px;
     display: flex;
@@ -67,3 +29,32 @@ color: #FFF;
     // margin-left: 5px;
     
     }
+
+    .image {
+        display: flex;
+    
+    }
+    
+    .image img {
+        width: 40px;
+        height: 40px;
+    }
+    .action {
+        // display: flex;
+        flex-direction: row;
+        align-items: center;
+         margin-top: 30px; 
+        // margin-right: 60%;/* Ajouter de l'espace à gauche des boutons */
+    }
+    
+    .supp {
+        border-radius: 5px;
+        background: var(--color2, #ED8A73);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        width: 150px;
+        height: 40px;
+        margin-left: 30%;
+
+    }
+    
+  

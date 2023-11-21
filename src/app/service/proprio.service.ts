@@ -13,7 +13,7 @@ export class ProprioService {
  constructor(private firestore: AngularFirestore) {
 
     this.proprioCollection = this.firestore.collection<any>('proprio');
-    console.log('je suis la', this.proprioCollection )
+    // console.log('je suis la', this.proprioCollection )
  }
 
  getProprios(): Observable<any[]> {

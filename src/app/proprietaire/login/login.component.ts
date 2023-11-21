@@ -1,25 +1,48 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { LoginService } from 'src/app/service/login.service';
-
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Login } from 'src/app/model/login';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent {
-  email: string = 'awa80598@gmail.com';
-  password: string = '80598@doum';
+export class LoginComponent implements OnInit{
+  loginForm: FormGroup;
 
-  constructor(private loginService: LoginService) {}
+  // logins: login[] = [];
+  constructor(private loginService: LoginService, private fb: FormBuilder) {
+    this.loginForm = this.fb.group({
+      email: ['', Validators.required],
+      password: ['', Validators.required],
+      code: ['', Validators.required],
+    });
+  }
+  
+ 
 
-  login() {
-    // Check if the email and password match your predefined values
-    if (this.email === 'awa80598@gmail.com' && this.password === '80598@doum') {
-      // Navigate to the 'accueil-awa' page
-      this.loginService.navigateAccueilAwa();
-    } else {
-      // Handle incorrect credentials if needed
-      console.error('Incorrect email or password');
-    }
+  // async login() {
+  //   try {
+  //     const { email, password, code } = this.loginForm.value;
+
+  //     // Appelez la méthode de connexion du service
+  //     const proprio = await this.loginService.login(email, password, code);
+
+  //     if (proprio) {
+  //       // La connexion est réussie, utilisez proprio comme nécessaire
+  //       console.log('Informations du propriétaire:', proprio);
+
+  //       // Par exemple, redirigez l'utilisateur vers la page appropriée
+  //       // this.loginService.navigateAppropriatePage(proprio);
+  //     } else {
+  //       // Gérez la situation où les informations du propriétaire ne sont pas disponibles
+  //       console.error('Aucune information sur le propriétaire disponible.');
+  //     }
+  //   } catch (error) {
+  //     // Gérez les erreurs ici
+  //     console.error('Erreur lors de la connexion:', error);
+  //   }
+  // }
+  ngOnInit(): void {
   }
 }

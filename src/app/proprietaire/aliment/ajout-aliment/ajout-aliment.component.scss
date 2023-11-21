@@ -64,7 +64,7 @@ margin-top: 7px;
 .conteneur{
     margin-left: 10px;
     width: 460px;
-    height: 570px;
+    height: 580px;
     padding: 16px 38px 15px 38px;
     border-radius: 10px;
 background: var(--white, #FFF);
@@ -85,7 +85,21 @@ select {
     background: var(--white, #FFF);
     /* Vous pouvez ajuster la taille, la police, la couleur, etc., ici */
 }
-.iptform, select {
+.iptform {
+    display: flex;
+    width: 100%; /* Utilisez 100% de la largeur disponible */
+    height: 10px; /* Ajustez la hauteur selon vos besoins */
+    padding: 11.865px 16.611px 11.865px 23.73px;
+    align-items: center;
+    gap: 7.91px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 0.791px solid #D2CECE;
+    background: var(--white, #FFF);
+    max-width: 400px;
+    margin-bottom: 10px;
+}
+.selec{
     display: flex;
     width: 100%; /* Utilisez 100% de la largeur disponible */
     height: 20px; /* Ajustez la hauteur selon vos besoins */

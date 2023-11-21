@@ -6,6 +6,9 @@ import { CategoryService } from '../service/category.service';
 import { Observable } from 'rxjs';
 import { Category } from '../model/category';
 import { of } from 'rxjs';
+import { Inject } from '@angular/core';
+import { RaceServiceService } from '../service/race-service.service';
+
 @Component({
   selector: 'app-defauld-categorie',
   templateUrl: './defauld-categorie.component.html',
@@ -15,7 +18,8 @@ export class DefauldCategorieComponent implements OnInit{
   categorys$: Observable<Category[]> = new Observable<Category[]>();
   numberOfRaces: number = 0;
 
-  constructor(private dialog: MatDialog, private categoryService:CategoryService) {}
+  constructor(private dialog: MatDialog, private categoryService:CategoryService,
+    private raceServiceService:RaceServiceService) {}
   openDialog(): void {
     const dialogRef = this.dialog.open(AjoutCategorieComponent, {
       width: '480px',
@@ -41,6 +45,7 @@ export class DefauldCategorieComponent implements OnInit{
       this.categorys$ = of(data.categories);
       this.numberOfRaces = data.numberOfRaces;
     });
+   
   }
   supprimer(id: string): void {
     this.categoryService.deleteCategory(id)

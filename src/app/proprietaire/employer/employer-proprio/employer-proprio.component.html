@@ -23,20 +23,18 @@
               <th>Avatar</th>
               <th>Nom Complet</th>
               <th>Contact</th>
-              <th>Email</th>
               <th>Adresse</th>
               <th>Action</th>
           </tr>
       </thead>
       <tbody>
-          <tr>
+          <tr *ngFor="let employer of employer$ | async; let i = index">
               <td ><input type="checkbox" class="check" ></td>
               <td><img src="../assets/user.png"></td>
-              <td>Jane Smith</td>
-              <td>987-654-3210</td>
-              <td>jane.smith@example.com</td>
-              <td>456 Elm St, Town</td>
-              <td><button class="pr" (click)="afficherDetail()">voir profil</button></td>
+              <td>{{ employer.nom }}</td>
+              <td>{{ employer.adresse }}</td>
+              <td>{{ employer.numero }}</td>
+              <td><button class="pr" (click)="afficherDetail(employer.id)">voir profil</button></td>
           </tr>
         
       </tbody>
