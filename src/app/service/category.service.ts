@@ -3,7 +3,7 @@ import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/comp
 import { map } from 'rxjs/operators';
 import { Observable, Subject, BehaviorSubject } from 'rxjs';
 import { Category } from '../model/category';
-
+import firebase from 'firebase/compat/app';
 @Injectable({
  providedIn: 'root'
 })
@@ -17,22 +17,37 @@ private selectedCategoryListSubject = new Subject<Category[]>();
 
 
  selectedCategoryList$: Observable<Category[]> = this.selectedCategoryListSubject.asObservable();
-  private selectedCategories: Category[] = [];
+private selectedCategories: Category[] = [];
 
   
  constructor(private firestore: AngularFirestore) { 
     this.categoryCollection = this.firestore.collection<any>('category');
  }
 
-  getCategory(): Observable<{ categories: Category[]; numberOfRaces: number }> {
-    return this.categoryCollection.valueChanges({ idField: 'id' })
-      .pipe(
-        map(categories => ({
+ getCategory(): Observable<{ categories: Category[]; numberOfRaces: number }> {
+  return this.categoryCollection.valueChanges({ idField: 'id' })
+    .pipe(
+      map(categories => {
+        console.log('Categories retrieved:', categories);
+        return {
           categories,
           numberOfRaces: categories.length
-        }))
-      );
-  }
+        };
+      })
+    );
+}
+getCategoryById(categoryId: string): Observable<Category | undefined> {
+  // Utilisez AngularFirestoreCollection pour obtenir une catégorie par ID
+  const categoryDoc = this.categoryCollection.doc(categoryId);
+  return categoryDoc.valueChanges({ idField: 'id' });
+}
+
+
+// getCategory(): Observable<Category[]> { // Spécifiez le type Category[]
+//   return this.http.get<{ categories: Category[]; numberOfRaces: number; }>(this.endpoint)
+//     .pipe(map(data => data.categories)); // Retournez seulement le tableau de catégories
+// }
+
 
   addCategory(category: Category): Promise<any> {
     return this.firestore.collection('category').add(category)
@@ -80,7 +95,9 @@ private selectedCategoryListSubject = new Subject<Category[]>();
     this.setSelectedCategoryList(this.selectedCategories);
   }
 
- 
+
+  
+
   
 
 

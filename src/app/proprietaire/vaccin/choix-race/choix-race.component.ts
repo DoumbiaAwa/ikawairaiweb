@@ -30,17 +30,31 @@ export class ChoixRaceComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.categoryService.getCategory().subscribe(data => {
-      this.categories = data.categories;
-    });
+    this.categoryService.getCategory().subscribe(
+      data => {
+        this.categories = data.categories;
+      },
+      error => {
+        console.error('Error fetching categories:', error);
+      }
+    );
   
-
-    this.categoryService.getSelectedCategoryList().subscribe(selectedCategories => {
-      this.selectedCategories = selectedCategories;
-      // console.log('Catégories sélectionnées :', this.selectedCategories);
-    });
+    this.categoryService.getSelectedCategoryList().subscribe(
+      selectedCategories => {
+        this.selectedCategories = selectedCategories;
+        console.log('Catégories sélectionnées :', this.selectedCategories);
+      },
+      error => {
+        console.error('Error fetching selected categories:', error);
+      }
+    );
   }
   
+
+  // async selectedCategory(category: Category): Promise<void> {
+  //   await this.categoryService.setSelectedCategoryList([category]);
+  //   this.updateSelectedCategories();
+  // }
 
   async selectedCategory(category: Category): Promise<void> {
     await this.categoryService.setSelectedCategoryList([category]);
@@ -58,5 +72,4 @@ export class ChoixRaceComponent implements OnInit {
       this.categoryService.addSelectedCategory(category);
     });
   }
-  }
-
+}

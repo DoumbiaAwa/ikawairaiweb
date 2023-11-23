@@ -34,6 +34,7 @@ background: #F53F3F;
 box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 color: #FFF;
 margin-top: 7px;
+cursor: pointer;
 
 }
 .action{
@@ -55,6 +56,7 @@ margin-top: 7px;
         margin-top: 10px;
         color: #FFF;
         font-weight: bold;
+        cursor: pointer;
     }
     
     .btn img {
@@ -80,11 +82,10 @@ background: var(--white, #FFF);
     height: 60px; /* Réduisez la hauteur selon vos besoins */
     margin-left: 70px;
 }
-select {
-    appearance: none; /* Supprimez le style par défaut du navigateur */
-    background: var(--white, #FFF);
-    /* Vous pouvez ajuster la taille, la police, la couleur, etc., ici */
-}
+// select {
+//     appearance: none; /* Supprimez le style par défaut du navigateur */
+//     background: var(--white, #FFF);
+// }
 .iptform {
     display: flex;
     width: 100%; /* Utilisez 100% de la largeur disponible */
@@ -99,17 +100,17 @@ select {
     max-width: 400px;
     margin-bottom: 10px;
 }
-.selec{
+select{
     display: flex;
-    width: 100%; /* Utilisez 100% de la largeur disponible */
-    height: 20px; /* Ajustez la hauteur selon vos besoins */
+    width: 500px;
+    height: 40px;
     padding: 11.865px 16.611px 11.865px 23.73px;
     align-items: center;
     gap: 7.91px;
     flex-shrink: 0;
     border-radius: 5px;
-    border: 0.791px solid #D2CECE;
-    background: var(--white, #FFF);
-    max-width: 400px;
-    margin-bottom: 10px;
+border: 0.791px solid #D2CECE;                                     
+background: var(--white, #FFF);   
+max-width: 400px;
+margin-bottom: 10px; 
 }

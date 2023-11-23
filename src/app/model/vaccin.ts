@@ -1,12 +1,11 @@
+
 import { Category } from "./category";
 
 export interface Vaccin {
-    nom: string;
-    date: string;
-    prix: number;
-    categories: Category[];
-  }
-  
-
-  
-  
+  id: string; 
+  nom: string;
+  date: string;
+  prix: number;
+  // categories: Category[];
+  categories: { id: string | undefined; nom: string }[];
+}

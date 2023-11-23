@@ -32,28 +32,18 @@ export class AjoutCategorieComponent implements OnInit {
     race: ['', Validators.required]
   });
 }
-  
- // ...
+
  addRace(event: Event): void {
   // const newIndex = this.races.length;
   this.races.push(this.createRace());
   event.preventDefault();
 }
-// addRace(event: Event): void {
-//   this.races.push(this.createRace());
-//   event.preventDefault();
-// }
 
- // ...
 get races(): FormArray {
   return this.categoryForm.get('races') as FormArray;
 }
 
   ngOnInit() {
-    // this.racesFormArray.push(this.fb.group({
-    //   race: [''],
-    // }));
-    // this.ajouterRace(new Event('initialization'));
     this.addRace(new Event('initialization'));
   }
 
@@ -61,18 +51,6 @@ get races(): FormArray {
     // Close the dialog with the result "annuler"
     this.dialogRef.close('annuler');
   }
-
-  // get racesFormArray() {
-  //   return this.categorieForm.get('races') as FormArray;
-  // }
-
-  // ajouterRace(event: Event): void {
-  //   this.racesFormArray.push(this.fb.group({
-  //     race: [''],
-  //     // photorace: ['']
-  //   }));
-  //   event.preventDefault();
-  // }
   
   
   ajouterCategory(): void {
@@ -90,6 +68,17 @@ get races(): FormArray {
         // Handle the error
       });
     console.log('Form value:', this.categoryForm.value);
+  }
+  getCategoryDetailsById(categoryId: string): void {
+    this.categoryService.getCategoryById(categoryId)
+      .subscribe((category: Category | undefined) => {
+        if (category) {
+          console.log('Category details by ID:', category);
+          // Faire quelque chose avec les détails de la catégorie si nécessaire
+        } else {
+          console.log('Category not found for ID:', categoryId);
+        }
+      });
   }
   
 }

@@ -13,7 +13,8 @@ import { Vaccin } from 'src/app/model/vaccin';
 })
 export class PageVaccinComponent implements OnInit {
   vaccins: any[] = [];
-  vaccin$: Observable<any[]> = new Observable<any[]>();
+  vaccin$: Observable<Vaccin[]> = new Observable<Vaccin[]>();
+
   dialogRef: MatDialogRef<any, any> | undefined;
 
   constructor(private dialog: MatDialog,
@@ -40,7 +41,11 @@ export class PageVaccinComponent implements OnInit {
   }
   ngOnInit(): void {
     this.vaccin$ = this.vaccinService.getVaccines().pipe(map(response => response.vaccins));
-    this.vaccin$.subscribe(data => console.log('Vaccines:', data));
+    this.vaccin$.subscribe(data => {
+  this.vaccins = data;
+  console.log('Vaccines:', this.vaccins);
+});
+
   }
   
  

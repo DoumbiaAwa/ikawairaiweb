@@ -1,5 +1,4 @@
-
 export interface Race {
-    id?: number;
-    races: string;
-}
+    race: string;
+    // ... autres propriétés de la race
+  }

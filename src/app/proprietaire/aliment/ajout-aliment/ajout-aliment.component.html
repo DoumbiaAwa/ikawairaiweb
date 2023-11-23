@@ -3,18 +3,19 @@
         <img src="../assets/aliment (2).png" alt="" class="ico">
         <h1>Ajouter un Aliment</h1>
     </div>
-    <form>
+    <form  [formGroup]="alimentForm">
         <div class="form-group">
             <label for="nomComplet">Nom</label>
-            <input type="text" id="nom" name="nom" placeholder="Nom du vaccin" class="iptform">
+            <input type="text" id="nom" name="nom" formControlName="nom"   placeholder="Nom de l'aliment" class="iptform">
         </div>
         <div class="form-group">
-            <label for="quantite">Quantité</label>
-            <input type="text" id="quantite" name="quantite" placeholder="Quantité" class="iptform">
+            <label for="quantite">Quantité disponible stock</label>
+            <input type="text" id="quantite" name="quantite" placeholder="Quantité" formControlName="quantite" class="iptform">
         </div>
+        
         <div class="form-group">
-            <label for="unite">Unité</label>
-            <select id="unite" name="unite" class="selec">
+            <label for="uniter">Unité</label>
+            <select id="uniter" name="uniter" formControlName="uniter">
                 <option value="kilo">Kilo</option>
                 <option value="sac">Sac</option>
                 <option value="herbe">Herbe</option>
@@ -22,18 +23,18 @@
         </div>
         <div class="form-group">
             <label for="prix">Frequence</label>
-            <input type="text" id="frequence" name="frequence" placeholder="frequence" class="iptform">
+            <input type="text" id="frequence" name="frequence" placeholder="frequence" formControlName="frequence" class="iptform">
         </div>
         <div class="form-group">
             <label for="prix">Prix</label>
-            <input type="text" id="prix" name="prix" placeholder="Prix" class="iptform">
+            <input type="text" id="prix" name="prix" placeholder="Prix" class="iptform" formControlName="prix">
         </div>
         <div class="ajout">
             <button class="btn" (click)="openDialog($event)">Choix races<img src="./assets/ajout.png"></button>
         </div>
         <div class="action">
-            <button class="enregistrer">Enregistrer</button>
-            <button class="annule">Annuler</button>
+            <button class="enregistrer" (click)="addAliment()">Enregistrer</button>
+            <button class="annule" (click)="annuler()">Annuler</button>
         </div>
     </form>
 </div>

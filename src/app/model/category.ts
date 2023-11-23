@@ -1,8 +1,8 @@
-import { Race } from "./race";
+import firebase from "firebase/compat";
 export interface Category {
   id: string | undefined;
   nom: string;
-  // photocat: string; // Ajoutez les propriétés manquantes
-  // photorace: string;
-  race: Race[];
+  vaccins: firebase.firestore.FieldValue | string[];
+  races: { id: string; race: string }[];
 }
+

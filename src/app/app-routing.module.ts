@@ -37,7 +37,6 @@ import { NotifPerteComponent } from './proprietaire/notification/notif-perte/not
 import { BarreComponent } from './barre/barre.component';
 import { SelectComponent } from './select/select.component';
 
-
 const routes: Routes = [
   {
     path: '',
@@ -198,6 +197,11 @@ const routes: Routes = [
     component: SelectComponent
 
   },
+  // {
+  //   path: 'aliment',
+  //   component: AjoutAlimentComponent
+
+  // },
 
 
 
