@@ -29,13 +29,13 @@
           </tr>
       </thead>
       <tbody>
-          <tr>
+          <tr  *ngFor="let vente of ventes">
               <td ><input type="checkbox" class="check" ></td>
               <td><img src="../assets/patte.png" class="pat"></td>
-              <td>Mouton</td>
-              <td>98</td>
-              <td>100 000</td>
-              <td>Belge</td>
+              <td>{{vente.categorie}}</td>
+              <td>{{vente.nombre}}</td>
+              <td>{{vente.prix}}</td>
+              <td>{{vente.race}}</td>
               <td><button class="pr" (click)="detailVente()">voir détail</button></td>
           </tr>
         

@@ -43,6 +43,7 @@ export class AjoutAnimalComponent implements OnInit {
   
     this.selectedCategory = undefined;
     this.updateSelectedCategory();
+    
   }
   
   updateSelectedCategory() {
@@ -54,7 +55,11 @@ export class AjoutAnimalComponent implements OnInit {
       ).subscribe((category) => {
         if (category) {
           this.selectedCategory = category;
-          raceControl.setValue(null);
+          if (category.races && category.races.length > 0) {
+            raceControl.setValue(category.races[0]); // Définir la première race de la catégorie
+          } else {
+            raceControl.setValue(null); // Aucune race disponible, réinitialiser la valeur
+          }
         }
       });
     }
@@ -67,7 +72,9 @@ export class AjoutAnimalComponent implements OnInit {
 
   ajout(): void {
     const animalData = this.animalform.value;
-    // Assure-toi d'avoir un modèle Animal correspondant à ta base de données
+    animalData.categorie = this.selectedCategory?.nom; // Utilisez le nom de la catégorie sélectionnée
+    animalData.race = this.animalform.get('race')?.value?.race; // Utilisez la valeur sélectionnée de la race
+    // Assurez-vous d'avoir un modèle Animal correspondant à votre base de données
     this.animalService.addAnimal(animalData)
       .then(() => {
         this.dialogRef.close();
@@ -76,4 +83,7 @@ export class AjoutAnimalComponent implements OnInit {
         console.error('Error during animal addition:', error);
       });
   }
+  
+  
+  
 }

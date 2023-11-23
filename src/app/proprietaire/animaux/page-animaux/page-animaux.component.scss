@@ -36,6 +36,7 @@ font-style: normal;
 font-weight: 600;
 line-height: normal;
 letter-spacing: 0.5px;
+cursor: pointer;
 }
 
 
@@ -81,10 +82,9 @@ border: 1px solid var(--black, #D9D9D9);
 background: var(--white, #FFF);
 display: flex; /* Utiliser flexbox pour organiser les éléments internes */
 position: relative; 
+margin-left: 50px;
   }
-.carte{
-    margin-top: 50px;
-}
+
 
 .md{
     margin-left: 80%;
@@ -108,7 +108,9 @@ width: 80px;
 }
 .carte{
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 100PX;
 }
 .race{
     color: #FE8F4A;

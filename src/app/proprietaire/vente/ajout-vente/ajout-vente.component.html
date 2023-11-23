@@ -4,42 +4,106 @@
         <img src="../assets/vent.png" alt="" class="ico">
         <h1>Ajouter une vente</h1>
     </div>
-    <form>
+    <form [formGroup]="venteform">
         <div class="form-group">
             <label for="categorie">Catégories</label>
-            <select id="categorie" name="categorie" >
-                <option value="option1">Option 1</option>
-                <option value="option2">Option 2</option>
-                <option value="option3">Option 3</option>
+            <select id="categorie" name="categorie"  id="categorie" name="categorie" formControlName="categorie">
+                <option  *ngFor="let category of categories$ | async" [value]="category.id">
+                    {{ category.nom }}</option>
+                <!-- <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option> -->
             </select>
         </div>
         <div class="form-group">
             <label for="race">Race</label>
-            <select id="race" name="race">
-                <option value="race1">Race 1</option>
-                <option value="race2">Race 2</option>
-                <option value="race3">Race 3</option>
+            <select id="race"  id="race" name="race" formControlName="race">
+                <option *ngFor="let race of selectedCategory?.races" [value]="race.race">
+                    {{ race.race }}</option>
+                <!-- <option value="race2">Race 2</option>
+                <option value="race3">Race 3</option> -->
             </select>
         </div>
         <div class="form-group">
             <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Nombre" class="iptform">
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre" class="iptform" formControlName="nombre" >
         </div>
         <div class="form-group">
             <label for="nombre">Prix unitaire</label>
-            <input type="number" id="prix" name="nombre" placeholder="Nombre" class="iptform">
+            <input type="number" id="prix" name="nombre" placeholder="Nombre" class="iptform" formControlName="prix">
         </div>
       
         <div class="form-group">
             <label for="race">Types</label>
-            <select id="race" name="race">
-                <option value="race1">Mâle</option>
-                <option value="race2">Femelle</option>
-                <option value="race3">Enceinte</option>
+            <select id="race" name="race" formControlName="type">
+                <option value="Male">Mâle</option>
+                <option value="Femelle">Femelle</option>
+                <!-- <option value="race3">Enceinte</option> -->
             </select>
         </div>
         <div class="action">
-            <button class="enregistrer">Enregistrer</button>
+            <button class="enregistrer" (click)="ajout()">Enregistrer</button>
         </div>
     </form>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="conteneur">
+    <i class='bx bx-x' style="margin-left: 100%" (click)="annuler()"></i>
+    <div class="image">
+        <img src="../assets/patte.png" alt="" class="ico">
+        <h1>Ajouter Des animaux</h1>
+    </div>
+    <form [formGroup]="animalform">
+        <div class="form-group">
+            <label for="categorie">Catégories</label>
+            <select id="categorie" name="categorie" formControlName="categorie" >
+                <option *ngFor="let category of categories$ | async" [value]="category.id">
+                    {{ category.nom }}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="race">Race</label>
+            <select id="race" name="race" formControlName="race">
+                <option *ngFor="let race of selectedCategory?.races" [value]="race.race">
+                    {{ race.race }}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" formControlName="nombre" placeholder="Nombre" class="iptform">
+        </div>
+        <div class="form-group">
+            <label for="sexe">Sexe</label>
+            <select id="sexe" name="sexe" formControlName="sexe">
+                <option value="male">Mâle</option>
+                <option value="femelle">Femelle</option>
+                <option value="femelle">Non définis</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="etat">État</label>
+            <select id="etat" name="etat" formControlName="etat">
+                <option value="non-enceinte">Non enceinte</option>
+                <option value="enceinte">Enceinte</option>
+                <option value="pas-detat">Pas d'état</option> Correction ici -->
+            <!-- </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="age">Âge</label>
+            <input type="text" id="age" formControlName="age" name="age" placeholder="facultatif" class="iptform">
+        </div>
+        <div class="action">
+            <button class="enregistrer"(click)="ajout()">Enregistrer</button>
+        </div>
+    </form>
+</div> --> 

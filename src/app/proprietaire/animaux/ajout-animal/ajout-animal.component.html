@@ -15,7 +15,7 @@
         <div class="form-group">
             <label for="race">Race</label>
             <select id="race" name="race" formControlName="race">
-                <option *ngFor="let race of selectedCategory?.races" [value]="race">
+                <option *ngFor="let race of selectedCategory?.races" [value]="race.race">
                     {{ race.race }}</option>
             </select>
         </div>
